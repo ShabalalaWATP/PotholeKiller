@@ -4,7 +4,7 @@ Build date: 1 November 2026, London. Submission deadline supplied in the event b
 
 ## Milestone and success criteria
 
-Deliver one usable journey: hunt, scan, encounter, review facts and a confirmed location, prepare a useful draft, award 60 XP once and reopen the record. A live provider check, passing local checks, browser verification and honest delivery materials are required before declaring the milestone complete.
+Deliver the reviewed guest journey with UK lookup/maps, type choices and fixed capture rewards of 60 to 110 XP. Optional shared collectors add Identity and database-backed scores. Local checks/build are complete and source is frozen. Latest hosted runtime/database verification and matching footage remain. No automatic council submission is in scope.
 
 ## Implemented in source
 
@@ -17,6 +17,13 @@ Deliver one usable journey: hunt, scan, encounter, review facts and a confirmed 
 - [x] Draft generation, copy, supported email handoff and official-route links.
 - [x] Demo email/status guard and honest report status vocabulary.
 - [x] Local PotholeDex, deterministic progression and photograph-based XP guard.
+- [x] Experimental profile, validated first-noticed date, extent/age bonuses and legacy 60 XP defaults.
+- [x] P1/P5/P7/P10 fictional map histories and power-dependent horns, armour and aura.
+- [x] UK full-address/postcode/pin lookup, county/unitary/NI routing and independently verified contact safeguards.
+- [x] Game/Streets/Night map styles, close-zoom anchored points and explicit GPS control.
+- [x] Report choices for cracking/small/medium/large; cracking has no size bonus.
+- [x] Local nickname/avatar, official SDK sign-in UI and opt-in shared profiles/leaderboard code.
+- [x] Native community function, owner-bound live receipts and Postgres migration with uniqueness constraints.
 - [x] Targeted unit test source and 90% configured domain/API coverage thresholds.
 - [x] Focused static security review, three source fixes, re-review and passing relevant unit tests.
 - [x] README, Codex evidence, safety/privacy notes and demo/submission scripts.
@@ -24,10 +31,20 @@ Deliver one usable journey: hunt, scan, encounter, review facts and a confirmed 
 ## Verification and delivery
 
 - [x] Finish dependency installation and retain the generated lockfile.
-- [x] Pass final `npm run check` with 128 tests including both origin regressions; record coverage: lines 99.05%, statements 98.29%, branches 97.22%, functions 95.23%.
+- [x] Pass baseline `npm run check` with 128 tests, including both origin regressions.
+- [x] Pass the 159-test power milestone's full checks/build; retain its coverage as historical evidence only.
+- [x] Pass final `npm run check`: 416 tests in 23 files, including ten real in-memory SQL, 21 client-race and 33 storage/API checks. Coverage: lines 98.98%, statements 98.4%, branches 95.81%, functions 96.17%.
+- [x] Pass expanded `npm run build` with native-community/SQL types at 15:32; freeze source and resolve all P2 findings.
+- [x] Pass six real lookup cases across four nations, Kent county responsibility and Mare Street address search; slowest observed request 5.3 seconds.
+- [x] Complete focused static security review of the power update without actionable findings and fix the quality review's invalid-date preview edge case with `safeParse`.
+- [x] Record final expanded-scope coverage/build results.
+- [ ] Verify latest lookup, map styles/zoom, GPS permission flow, type choices, power and local profile controls in the browser.
+- [x] User manually enabled Identity in the [linked project](https://app.netlify.com/projects/potholekiller-hackney/identity) at 15:24.
+- [ ] Run the next `hackathon` branch-preview build to provision/stage Netlify Database and the committed collector migration; verify actual hosted database behaviour.
+- [ ] Verify hosted account/session, public opt-in/out, new live capture claims and shared board behaviour.
 - [x] Run `next typegen` before TypeScript checks for clean-clone route declarations and ignore generated `next-env.d.ts`.
-- [x] Pass the Next.js 16.4.3 production build with native-worker process permissions.
-- [ ] Verify production startup separately from the build.
+- [x] Pass the baseline Next.js 16.4.3 production build with native-worker process permissions.
+- [x] Verify baseline hosted startup, config, assets, real croissant rejection and cross-site HTTP 403.
 - [x] Verify model metadata access for `gpt-6.1-terra` (HTTP 200); this does not prove image analysis.
 - [x] Complete genuine OpenAI POST checks: capturable pothole in 14.5 seconds and croissant rejection in 4.6 seconds.
 - [x] Add opt-in `npm run test:live`; it requires the running local server and makes two paid requests, never CI requests.
@@ -40,29 +57,44 @@ Deliver one usable journey: hunt, scan, encounter, review facts and a confirmed 
 - [x] Use the labelled local schematic for fictional sample report forms; keep OSM/manual verified coordinates for real uploads.
 - [ ] Verify deliberate OSM tile failure, clipboard failure fallback and remaining accessibility behaviour.
 - [x] Record zero production audit vulnerabilities and a passing full high-severity gate, with 16 moderate development-only findings under a scoped exception.
-- [x] Configure weekly Dependabot updates and CI checks; remote CI has not run yet.
-- [x] Create local foundation commit `f6da0b8` on `feature/hackathon-mvp` and verify the intended GitHub repository is public and empty.
+- [x] Configure weekly Dependabot updates and pass baseline [application CI](https://github.com/ShabalalaWATP/PotholeKiller/actions/runs/41314934636) and [security CI](https://github.com/ShabalalaWATP/PotholeKiller/actions/runs/41314934625); these predate the power update.
+- [x] Record zero CodeQL alerts and enabled secret scanning/push protection.
+- [x] Create foundation commit `f6da0b8` and verify the intended empty public repository before publication.
 - [x] Scan 78 publishable source files and 42 browser bundle files for the configured key, with no match; keep `.env.local` ignored.
-- [ ] Commit the completed application and publish it to the specified GitHub repository.
+- [x] Publish source commit [`becb8af`](https://github.com/ShabalalaWATP/PotholeKiller/commit/becb8afb71bb04cb94a7cd52d05939c3aeade9b7) on `feature/hackathon-mvp`, now GitHub's default branch; leave `main` unwritten.
 - [x] Create/link the free Netlify project and configure the key with explicit user consent using standard account-protected environment storage, not write-only storage.
-- [ ] Deploy the application and verify its actual public preview link.
+- [x] Verify the public [baseline preview](https://hackathon--potholekiller-hackney.netlify.app) using the Windows manual-packaging workaround, with private environment files excluded.
+- [ ] Deploy the expanded build and verify the updated public preview; it currently runs the old baseline.
+- [ ] Publish expanded source and record its own remote CI results.
 - [x] Record the real silent live-AI demo, verify its 47.56-second media duration and visually inspect a frame; keep the WebM under ignored `output/`.
-- [ ] Publish the recording and verify a publicly accessible video link.
-- [ ] Add team/contact details, find the organiser's form and submit before 17:00.
+- [x] Publish the [demo video](https://github.com/ShabalalaWATP/PotholeKiller/releases/download/hackathon-demo-2026/potholekiller-hackathon.webm) in a public [prerelease](https://github.com/ShabalalaWATP/PotholeKiller/releases/tag/hackathon-demo-2026).
+- [ ] Record/publish matching footage under 90 seconds; the current 47.56-second video shows the earlier 60 XP flow, without latest lookup or collectors.
+- [x] Record the team as Alex O, solo.
+- [x] Receive contact email privately and keep it in ignored local submission notes, outside the public repository.
+- [x] Confirm the organisers have not released their submission link yet.
+- [ ] Complete the organiser's form when released, aiming to meet the stated 17:00 deadline.
 - [ ] Verify the submitted links and retain the organiser's actual confirmation.
 
 ## Constraints and risks
 
-No authentication, database, automatic council sending, engineering severity claims or verified repair status is in scope. No new multiplayer, payments or leaderboard work before delivery. The schematic map cannot locate a real defect.
+The authorised expansion uses optional Netlify Identity and Database for collectors. No separate FastAPI service, automatic council messages, engineering danger claims or verified repair status is implemented. A shared physical-defect register and council-accountability metrics remain future work. The schematic cannot locate a real defect.
 
-Public hosting, a public video link, team/contact details and the organiser submission route require actual confirmation. Explicit `APP_ORIGIN` is preferred, including `http://127.0.0.1:3000` locally; Netlify's trusted `DEPLOY_PRIME_URL` is the next fallback for its preview URLs. Per-process request limits cannot enforce a shared spending cap on multiple server instances. Configure provider spending controls, an upstream hard stop and platform limits before opening a high-traffic public demo.
+Latest deployment, database/migration runtime verification, hosted auth/board checks and replacement footage are pending. Identity is enabled. Alex O is solo; contact is private, organisers have not released the submission link, and submission is unsent. Explicit `APP_ORIGIN` is preferred locally; trusted `DEPLOY_PRIME_URL` supplies preview origin. Per-process limits are not a shared spending ceiling.
 
-Use the preview URL returned by the remote Netlify build; its alias flag is unsupported. Do not declare deployment complete until the returned application URL works.
+Baseline Windows packaging used dereferenced package links and official Linux sharp `0.35.5` / libvips package `1.3.4` artifacts with SHA-512 verification, excluding private `.env` files. This is a manual preview; production is not published and Git continuous deployment is not configured. Do not apply the baseline smoke result to the unfinished power deployment.
 
-Initial publication of `main` was rejected by automatic approval review under a shared-branch assumption; no push completed. Publish a new `feature/hackathon-mvp` branch into the confirmed empty public repository without mutating `main`. Keep the development-only minimatch exception visible in [security notes](security/SECURITY_NOTES.md), weekly dependency review and the high-severity audit gate.
+Initial publication of `main` was rejected by automatic approval review under a shared-branch assumption. The new `feature/hackathon-mvp` branch was then published into the empty public repository and became its default; `main` was not written. Keep the development-only minimatch exception visible in [security notes](security/SECURITY_NOTES.md), weekly dependency review and the high-severity audit gate.
 
-Measured unit coverage excludes React components, browser hooks and client-side image handling. Separate browser and real-provider smoke checks establish the specific outcomes recorded above; they are not exhaustive accuracy or accessibility assessments.
+Coverage now includes core/API, location/community, the native function and pure client helpers, excluding React components/hooks/browser image utility. The 416-test measurements are recorded above. Separate real vision/location and baseline browser checks establish specific outcomes, not exhaustive accuracy or accessibility.
 
-The browser stores report fields and confirmed coordinates, but no photos. Users must avoid entering personal details. Local duplicate detection is byte based and browser local, not proof of a unique real-world defect.
+At the user's explicit rush-delivery request, skip further CI/CodeQL/unit runs unless vital and do not wait for pipelines. New commits use `[skip ci]`. Baseline green runs remain historical evidence, not validation of the new commit. Deliver the branch preview, not production.
+
+Completed desktop/portrait checks and the 60 XP video describe the baseline. The new profile uses self-reported observations, not actual defect age, council history or an engineering danger classification. Bonuses are fixed at capture and do not grow on refresh. Fictional map profiles are supplied only to bundled samples; real uploads start unknown.
+
+The browser retains drafts/coordinates without photos. Identity SDK vendor storage can include tokens/email; game profile storage does not duplicate them. Shared database rows contain private auth IDs, game fields, hashes/receipts, times and XP, not photos/coordinates/report text/email/passwords. Receipt validity is 30 minutes; expired rows are not automatically deleted. See [community setup](COMMUNITY_SETUP.md).
+
+## Future discussion, outside today's scope
+
+Explore **Britain's Most Wanted Potholes** as a physical-defect register with separate resident reports and evidenced authority history. This remains distinct from the implemented collector board, whose counts are per-user eligible images, not independently unique potholes or verified submissions. Publish no invented metrics or unsupported council blame. See [roadmap](ROADMAP.md).
 
 See [build notes](../CODEX_BUILD_NOTES.md) for recorded results and [submission materials](SUBMISSION.md) for the final handoff.
