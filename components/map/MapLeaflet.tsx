@@ -51,6 +51,32 @@ function Events({ onChange }: { onChange?: (location: Location) => void }) {
   useMapEvents({ click: event => onChange?.({ lat: +event.latlng.lat.toFixed(6), lng: +event.latlng.lng.toFixed(6) }) });
   return null;
 }
+function MapResize() {
+  const map = useMap();
+  useEffect(() => {
+    const container = map.getContainer();
+    let frame = 0;
+    let width = 0;
+    let height = 0;
+    const refresh = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const nextWidth = container.clientWidth;
+        const nextHeight = container.clientHeight;
+        if (!nextWidth || !nextHeight || (nextWidth === width && nextHeight === height)) return;
+        width = nextWidth;
+        height = nextHeight;
+        // Preserve Leaflet's default pan so a map mounted in a hidden dialog recentres correctly.
+        map.invalidateSize({ animate: false });
+      });
+    };
+    const observer = new ResizeObserver(refresh);
+    observer.observe(container);
+    refresh();
+    return () => { observer.disconnect(); cancelAnimationFrame(frame); };
+  }, [map]);
+  return null;
+}
 function LayerPolicy({ gameMap }: { gameMap: boolean }) {
   const map = useMap();
   useEffect(() => {
@@ -234,6 +260,7 @@ export default function MapLeaflet({ mode = "hunt", schematic = false, realWorld
   return <div className={`atlas atlas-style-${activeStyle} ${mode === "location" ? "location-atlas" : ""}`}>
     <MapContainer center={validLocation ? [validLocation.lat, validLocation.lng] : centre} zoom={14} minZoom={gameMap ? 13 : 2}
       maxZoom={19} scrollWheelZoom={false} zoomControl={true} attributionControl={true}>
+      <MapResize />
       {!gameMap ? <TileLayer key={tileAttempt} url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" maxNativeZoom={19} maxZoom={19}
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         eventHandlers={{ tileerror: () => setTileError(true) }} /> :
