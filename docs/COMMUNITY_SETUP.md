@@ -1,14 +1,14 @@
 # Optional shared collectors
 
-The local guest journey works without an account. Identity was enabled at 15:24. Profile preview `6ae75c622086dbea5bf72fdc` is deployed, with isolated `hackathon` database created and base SQL staged/uploaded. Runtime health/auth remains unverified; latest repair preview deployment is pending. Local SQL checks do not establish hosted success.
+[Production](https://potholekiller-hackney.netlify.app) is ready at `6ae767a03f094ad44e5a7911`, source `317ef76`, including the clean-built and phone-verified map fix. Core/mock flows, production reads and 401/403 road-write guards are verified. No account was created; confirmed-account scoring remains manual follow-up. Guest play works without an account.
 
-## Operator setup still required
+## Deployment and verification record
 
 1. Identity is enabled in the linked [Netlify project](https://app.netlify.com/projects/potholekiller-hackney/identity), manually completed at 15:24. Its settings determine sign-in providers and email confirmation; runtime account behaviour is not yet verified.
 2. The `hackathon` / `branch-deploy` profile build created the isolated database and staged/uploaded [base SQL](../netlify/database/migrations/20261101151000_collector_profiles.sql). The new [repair migration](../netlify/database/migrations/20261101154000_community_repairs.sql) is additive; do not edit an applied base migration. Verify actual schema/runtime after deployment.
-3. Deploy the expanded Next.js application and native community function, then verify account creation/confirmation, sign-in/out, profile save, public opt-in/out and a new eligible capture on the actual preview.
-4. Verify server ownership checks, repeated claims, expired receipts and database-unavailable handling on that hosted environment before calling the shared feature operational.
-5. Verify explicit map opt-in, canonical capture/nearby-link proof, one-vote/account weights and once-only repair credits. Canonical Identity callback configuration needs production approval after final preview verification; production is not published.
+3. Production app/native functions are deployed. Root/config, community/road reads, demo JPEG and Hackney location lookup returned 200; config reports live analysis available.
+4. Production anonymous road writes returned 401 and cross-origin writes 403. Email sign-in form and local profile save were checked without account creation.
+5. Confirmed-account capture, public opt-in/out, publication, links, votes/credits and email callback roundtrips have not been tested end to end. Record this limit without treating local SQL or mock simulation as authenticated proof.
 
 Plain `npm run dev` does not supply Netlify Identity or `/api/community`. Local guest nickname/avatar and the PotholeDex remain usable when shared services are unavailable. Do not add hand-rolled session tokens or credentials to game data.
 
@@ -26,8 +26,8 @@ The official Identity SDK manages authentication and its own vendor session stor
 
 The database contains private auth UUIDs, game profile fields, hashes/receipts, timestamps, XP and private vote/credit ownership. Public road pins, labels, type and self-reported age are stored only after separate map opt-in, default false for new/legacy records. Complete photos, report text, email and passwords are not stored. Public projections omit private auth IDs. See [repair privacy](COMMUNITY_REPAIRS.md).
 
-The council draft now includes an editable reporter name, prefilled from the chosen nickname and validated to 2 to 80 characters. It remains outside public road API responses. A new real hunt confirms a road point before photo input. These newest changes are not yet covered by a verified build/hosted preview result.
+The editable 2-to-80-character reporter name defaults from nickname and stays outside public road API responses. Preview browser testing passed pin-first postcode selection, own-photo live analysis, preserved pin, name editing and the named Hackney `mailto:` draft. No email was sent.
 
 Receipt validity is **30 minutes for claiming**, not a retention period. Expired receipt rows are not automatically deleted by the current implementation. A cleanup/retention policy remains future operational work; do not promise automatic removal after 30 minutes.
 
-The last full check passed 416 tests before the repair feature. Latest build/types passed at 15:49, plus five focused rule and six database/auth/concurrency checks. No new full coverage is claimed. Hosted behaviour remains unverified. The user requested no further full CI/CodeQL/unit runs or pipeline waits unless vital; new commits use `[skip ci]`. Capture counts and community-marked fixed status do not prove council submission or engineering repair.
+The 416-test coverage predates repairs and remains historical. Latest build/types, core/mock browser flows and production smoke checks passed without another full suite/CI, per instruction. Confirmed-account mutations remain untested. Counts/community-marked fixed do not prove council submission or engineering repair.

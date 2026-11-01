@@ -1,6 +1,6 @@
 # Future direction
 
-Opt-in road records, manual nearby links and weighted community repair marking are now implemented alongside power, lookup/maps and collectors. Independent physical-defect deduplication and evidenced council accountability remain future work. Latest 15:49 build/types and focused repair checks passed; the 416-test coverage is historical. Profile preview/database staging completed, with runtime/repair-preview verification pending.
+Opt-in road records/manual links/repair marking are implemented with power, lookup/maps and collectors. [Production](https://potholekiller-hackney.netlify.app) source `317ef76`, phone map, core/mock flows, screenshots and video are complete. Confirmed-account scoring remains manual follow-up. Independent physical-defect deduplication/council evidence remain future work; 416-test coverage is historical.
 
 ## Britain's Most Wanted Potholes
 
@@ -22,7 +22,7 @@ Before building a physical-defect register, decide evidence, privacy/consent, co
 
 Guest nicknames/avatars work locally. Optional official Netlify Identity sessions support database-backed profiles, opt-in public fields and collector levels. Shared counts require eligible new signed-in live user uploads with owner-bound, 30-minute-valid receipts. SQL uniqueness is per user and normalised image hash. Samples/offline/guest history is not backfilled, and no fake entries are seeded.
 
-These are photo-capture counts, not unique physical potholes or council submissions. Shared XP now includes once-only issue/user repair credits equal to the reporter's first frozen capture XP; counts stay unchanged. Identity is enabled; profile deployment/base SQL staging completed, but runtime and latest repair preview remain unverified. Receipt validity is not deletion. See [community setup](COMMUNITY_SETUP.md).
+These are photo-capture counts, not unique potholes or council submissions. Order bonuses are 60/20/5 for first/positions 2 to 5/later, once/user/issue. Repair credit matches capture plus order bonus, up to 170, without another count. Core/mock flows and production readiness passed; confirmed-account writes remain untested. Receipt validity is not deletion. See [community setup](COMMUNITY_SETUP.md).
 
 ## Creature progression, implemented experiment
 

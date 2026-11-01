@@ -1,6 +1,6 @@
 # Road publication and community repair marking
 
-Implemented in source. The earlier repair version passed its 15:49 build/types and focused checks; the newest location-first, reporter-name and order-bonus changes await build/runtime verification. This is a preview feature, not a verified council repair feed.
+Approved [production](https://potholekiller-hackney.netlify.app) is ready at `6ae767a03f094ad44e5a7911`, source `317ef76`, with clean build and production phone-map verification. Core/mock flows, read endpoints/sign-in UI and 401/403 road-write guards passed. Confirmed-account scoring remains manual follow-up. This is not a verified council repair feed.
 
 ## Real community records
 
@@ -10,7 +10,7 @@ Road-issue creation/linking requires official SDK authentication and capture pro
 
 A new real hunt confirms its road pin/address before photo input. Streets/Night background clicks prefill that chooser; existing monsters open age/report-count/repair details and an add-own-report action. The editable 2-to-80-character reporter name defaults from the collector nickname and appears in the council draft's **Reported by** line, but is omitted from public road API responses. It does not determine account ownership or vote role.
 
-The additive [repair migration](../netlify/database/migrations/20261101154000_community_repairs.sql) follows the base collector migration. Do not edit an already-applied base migration. The isolated `hackathon` preview database exists and base SQL was staged/uploaded; actual repair schema/runtime results remain to verify.
+The additive [repair migration](../netlify/database/migrations/20261101154000_community_repairs.sql) follows the base collector migration; do not edit applied base SQL. The preview's anonymous community read returned 200 and road-issue read returned an empty 200 list. Authenticated create/link/vote/credit behaviour still needs verification.
 
 ## Votes and rewards
 
@@ -26,4 +26,6 @@ The labelled demo contains 60 fictional issues, 75 mock report links and 20 mock
 
 The mock map/league is labelled and separate from authenticated data. Each chosen fictional actor can add one simulated report per issue with the same order-bonus rules, updating the twenty-user local league. Fictional voters drive persistent local repair simulation and matching credits. No mock Identity accounts are seeded. Real geography does not make these defects real.
 
-Receipt validity remains 30 minutes for claims, not a deletion period. Expired receipt rows are not automatically deleted. Opting into public road metadata is separate from public collector-profile consent. Hosted verification, canonical Identity callback approval and replacement demo footage remain pending; no production publication or organiser submission is claimed.
+Verified preview scenario: add a third report, replay it without extra XP, cast a three-point role vote and replay without extra points, then two ordinary votes to reach five. Active pins dropped from sixty to fifty-nine and linked reporters received 280 XP in aggregate fixture repair credits. This is a mock-simulation outcome, not a real council or authenticated community action.
+
+Receipt validity is 30 minutes for claims, not deletion; expired rows are not automatically deleted. Road/profile consents are separate. App/screenshots and [public YouTube demo](https://youtu.be/NFl9KuJ_NlU) are complete. The hackathon entry succeeded: **Submitted, waiting for judging**. Contact values and private receipt/status URL stay private. Confirmed-account scoring remains manual follow-up.

@@ -1,6 +1,6 @@
 # Security and privacy notes
 
-Scope: local-first hackathon application with optional Identity/Postgres collectors, 1 November 2026. The latest expanded build and hosted shared service are not yet verified. These notes are not a completed OWASP assessment or a production-readiness guarantee.
+Scope: local-first app with optional Identity/Postgres collectors, 1 November 2026. Approved production build/public endpoints and core/mock flows are verified. Confirmed-account capture end-to-end remains untested. These notes are not a full OWASP or high-traffic readiness assessment.
 
 ## Boundaries and implemented controls
 
@@ -25,7 +25,7 @@ Live-analysis defaults are 6 requests per minute per bucket, 100 validated provi
 
 Enable trusted proxy mode only where infrastructure overwrites client-supplied forwarding headers. These limits are best-effort backstops: restarts reset them and multiple serverless instances maintain separate counters. They are neither authentication nor a global spending ceiling.
 
-Before a high-traffic public demo, the operator must configure provider project spending controls, an enforceable upstream hard stop, platform upload/request limits and suitable shared abuse protection. Check the hosting platform's actual body-size, execution-duration and scaling limits; the application's limits do not override them. The baseline preview is verified; this is not a verified production deployment or a high-traffic readiness assessment.
+Provider spending controls, an upstream hard stop, platform limits and shared abuse protection remain operator requirements for high traffic. Application limits do not override platform body-size/duration/scaling constraints. Production smoke checks passed; no load or high-traffic assessment is claimed.
 
 ## Data handling
 
@@ -47,9 +47,11 @@ Visual AI can be wrong. It does not establish dimensions, depth, engineering dan
 
 Duplicate detection recognises the same image bytes in this browser. Re-encoding a photo, clearing storage or using another browser can bypass it. Local XP is a game feature, not an anti-fraud system or a cross-user defect register.
 
-The last full pre-repair check passed 416 tests/23 files, with 98.98% lines, 98.4% statements, 95.81% branches and 96.17% functions across the then-configured core/API/native-community/pure-helper scope, excluding React components/hooks/browser image utility. These historical percentages do not cover the latest repair/demo addition. Its five vital rule checks, six database/auth/concurrency checks and 15:49 build/types passed. No further full suite ran. Hosted behaviour remains unverified; no full OWASP assessment or production DAST is claimed.
+The last full pre-repair run passed 416 tests/23 files: lines 98.98%, statements 98.4%, branches 95.81%, functions 96.17%, excluding React components/hooks/browser image utility. These metrics are historical. Later focused checks, latest build/types, core/mock browser flows and production 200/401/403 guards passed without another full suite. Confirmed-account capture remains untested; no full OWASP assessment or production DAST is claimed.
 
-Repairs use one vote/account: ordinary weight one, SDK `council_verified` three, threshold five. One council-role vote cannot clear. Each linked reporter receives at most one issue/user credit matching their first frozen capture XP, without adding capture count. Shared XP includes credits. `community_fixed` is community marking, not engineering/council repair evidence. Manual nearby links do not independently deduplicate physical potholes.
+Repairs use one vote/account: ordinary one, SDK `council_verified` three, threshold five. One role vote cannot clear. Order bonuses are 60/20/5 for first/positions 2 to 5/later, once/user/issue under row lock. Matching repair credit is frozen capture plus order bonus, up to 170, without another capture count. Latest build/mock flow passed; real authenticated credit actions remain untested. Community-fixed is not engineering/council repair evidence or physical-defect deduplication.
+
+Real hunts confirm the road point before photo input. Editable reporter name defaults from nickname, accepts 2 to 80 characters and appears in the council draft, omitted from public road API responses. It cannot choose account ownership or SDK vote role. The pin-first/live-photo/name/Hackney-mailto browser flow passed; email was not sent.
 
 Power is an experimental game attribute, never an engineering danger rating. Extent and first-noticed date are optional user observations. Dates cannot establish actual defect age, council notification or repair history. Fictional map profiles are supplied only to bundled samples; real uploads start unknown. Rewards use the profile and preparation time at capture, so they do not grow on refresh; older records default to the original 60 XP. The council draft labels any supplied extent/date as self-reported and excludes XP/game-power claims.
 
@@ -57,15 +59,17 @@ For baseline source commit `becb8afb71bb04cb94a7cd52d05939c3aeade9b7`, remote [a
 
 ## Credentials and hosting preparation
 
-A known-key scan checked 166 source files and 44 browser bundles without finding the configured key. `.env.local` remains ignored. This narrow check does not establish the absence of every possible secret.
+Latest known-key scanning found no match in 174 source files or 44 browser files; the deployment ZIP contained zero private environment files/key matches. `.env.local` stays ignored. This is not a comprehensive secret scan.
 
-Identity was enabled at 15:24. Profile preview `6ae75c622086dbea5bf72fdc` deployed at the [same alias](https://hackathon--potholekiller-hackney.netlify.app), with isolated `hackathon` DB created and base SQL staged/uploaded. Runtime health remains unchecked. Repair preview/additive SQL are next; applied base SQL must not be edited. Canonical Identity callback needs production approval after final preview verification. No production publication or successful hosted shared flow is claimed.
+Approved [production](https://potholekiller-hackney.netlify.app) is ready at `6ae767a03f094ad44e5a7911`, source `317ef76`, after a clean production build. Root/config/community/road/demo JPEG/Hackney lookup returned 200, anonymous road mutation 401 and cross-origin 403. Canonical origin and preview are preserved. Email UI/local profile save were checked without account creation; confirmed-account scoring and callback roundtrips remain manual follow-up.
 
 The user explicitly consented to the temporary OpenAI key on Netlify. Free-plan per-scope/write-only controls required an upgrade, so authenticated CLI setup used standard account-protected environment storage, without a paid upgrade or write-only claim. Application key use remains server-side and `.netlify/` is ignored. Database connection configuration belongs to the hosting service, not public game data.
 
-The Windows preview workaround dereferenced package links and bundled official Linux sharp `0.35.5` / libvips package `1.3.4` artifacts with SHA-512 verification, excluding private `.env` files. Page/config/assets, real croissant rejection and cross-site HTTP 403 passed on the old baseline. Production is not published and Git continuous deployment is not configured. These checks do not verify the pending expanded build or prove every bundle file secret-free.
+The original Windows workaround dereferenced package links and bundled verified official Linux sharp/libvips artifacts, excluding private environment files. Preview and subsequently approved production are now deployed/smoke-verified. Git continuous deployment remains unconfigured; neither smoke checks nor the narrow key scan prove complete security coverage.
 
-The [baseline recording](https://github.com/ShabalalaWATP/PotholeKiller/releases/download/hackathon-demo-2026/potholekiller-hackathon.webm) shows real live analysis/earlier 60 XP, without latest map/repair/lookup/collector features. Replacement footage is pending. Keep private/session data out of recordings. Default mock map/league and local repair simulation are explicitly labelled: 60 fictional issues, 75 mock links and twenty mock users never seed real Identity accounts. See [demo credits](../DEMO_DATA_CREDITS.md) and [repair rules](../COMMUNITY_REPAIRS.md).
+The primary [YouTube demo](https://youtu.be/NFl9KuJ_NlU) is public and accepted on the submission receipt. Labelled AI narration/demo data and optional English captions remain; GitHub MP4/SRT are download backups. Official status is **Submitted, waiting for judging**. Receipt/status URL and all contact values remain private. Mock issues/users remain labelled and never seed Identity accounts. See [credits](../DEMO_DATA_CREDITS.md) and [repair rules](../COMMUNITY_REPAIRS.md).
+
+Phone hotfix `317ef76` is deployed and passed production 390 × 844 QA: map 275 × 244, centred pin 137.54/121.82, six tiles. A clean build passed after local servers were stopped; contention remains the suspected cause of the earlier `Failed publishing static content` error. Five reviewed/linked screenshots are committed in `e9a0b18`. No full CI/test suite was rerun.
 
 At the user's explicit delivery request, no further CI/CodeQL/unit runs or pipeline waits are planned unless vital. New commits use `[skip ci]`; linked baseline green runs do not validate the new commit. Secret scanning/push protection remain enabled. This changes delivery sequencing, not the recorded scope of prior checks.
 
@@ -85,4 +89,4 @@ Reviewed ESLint/parser call sites use fixed options, including `dot: true`. The 
 
 Forcing minimatch 11 would break plugins expecting the callable minimatch 3 API. The installed React and accessibility plugin peer ranges also exclude ESLint 10, so a forced toolchain upgrade is not treated as a safe patch. Retain the [weekly Dependabot updates](../../.github/dependabot.yml) and [high-severity CI audit gate](../../.github/workflows/ci.yml). Revisit this exception when compatible patched tooling is available or if glob inputs/options, build tooling or dependency placement change. Do not suppress the moderate audit output.
 
-Baseline desktop/portrait checks verified local review, confirmations, demo guards, copy, persistent XP and labelled failure recovery. Real vision and six real UK lookup checks passed. Shared collectors still require hosted setup and verification. Their per-user normalised image uniqueness is not global physical-defect deduplication, independent resident verification or evidence of council submission. Samples/offline/guest captures are not backfilled. The opt-in `npm run test:live` makes two paid local-server requests and is never CI. See [build notes](../../CODEX_BUILD_NOTES.md) for remaining work.
+Baseline layout/recovery checks, real vision/UK lookup and latest core/mock flows passed. Production sign-in UI/read endpoints and anonymous write guards work; confirmed-account capture remains untested. Per-user image uniqueness is not physical-defect deduplication, independent-resident verification or council-submission proof. Samples/offline/guest history is not backfilled. Opt-in `npm run test:live` makes two paid requests and is never CI. See [build notes](../../CODEX_BUILD_NOTES.md).

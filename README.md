@@ -6,8 +6,9 @@ A monster-collecting game that helps UK residents turn road damage into useful r
 Choose the road point, photograph the problem, review the evidence and collect a creature.
 
 **[Open the app](https://potholekiller-hackney.netlify.app)** ·
-**[Watch the 48-second community demo](https://github.com/ShabalalaWATP/PotholeKiller/releases/download/hackathon-community-2026/potholekiller-community-demo.webm)** ·
-[Video release](https://github.com/ShabalalaWATP/PotholeKiller/releases/tag/hackathon-community-2026)
+**[Watch the 89-second AI-narrated demo](https://youtu.be/NFl9KuJ_NlU)** ·
+[MP4 download backup](https://github.com/ShabalalaWATP/PotholeKiller/releases/download/hackathon-final-2026/potholekiller-hackathon-narrated.mp4) · [English captions](https://github.com/ShabalalaWATP/PotholeKiller/releases/download/hackathon-final-2026/potholekiller-hackathon-narrated.srt) · [Video release](https://github.com/ShabalalaWATP/PotholeKiller/releases/tag/hackathon-final-2026) ·
+[47-second WebM backup](https://github.com/ShabalalaWATP/PotholeKiller/releases/download/hackathon-community-2026/potholekiller-community-demo.webm)
 
 ![PotholeKiller hunt map with labelled fictional issues on Hackney streets](docs/screenshots/hunt-map.png)
 
