@@ -4,6 +4,31 @@ import { buildMailto, GENERIC_INSTRUCTIONS, HACKNEY_EMAIL, HACKNEY_INSTRUCTIONS,
 import { validReportInput } from "./game-fixtures";
 
 describe("human-reviewed report preparation", () => {
+  it("keeps a bounded reporter name in the private draft and defaults older records safely", () => {
+    const report = prepareReport(validReportInput({ reporterName: "  Alex O'Neil  " }));
+    expect(report.reporterName).toBe("Alex O'Neil");
+    expect(report.body).toContain("Reported by: Alex O'Neil");
+    for (const reporterName of ["A", "a".repeat(81), "Alex\r\nBcc:someone@example.com"]) {
+      expect(() => prepareReport(validReportInput({ reporterName }))).toThrow();
+    }
+    const old = { ...report } as Record<string, unknown>;
+    delete old.reporterName;
+    expect(ReportRecordSchema.parse(old).reporterName).toBe("Not supplied");
+  });
+  it("defaults publication consent off, preserves a valid real target and rejects mock publication", () => {
+    const legacy = prepareReport(validReportInput());
+    expect(legacy.publishToMap).toBe(false);
+    const target = "e98a2d49-58f2-4563-b6c7-5331b34a802b";
+    const shared = prepareReport(validReportInput({ publishToMap: true, communityIssueId: target }));
+    expect(shared.communityIssueId).toBe(target);
+    expect(shared.publishToMap).toBe(true);
+    expect(shared.body).not.toContain("publishToMap");
+    expect(() => prepareReport(validReportInput({ isDemo: true, publishToMap: true }))).toThrow();
+    expect(() => prepareReport(validReportInput({ communityIssueId: "demo-issue-001" }))).toThrow();
+    const oldStored = { ...legacy } as Record<string, unknown>;
+    delete oldStored.publishToMap;
+    expect(ReportRecordSchema.parse(oldStored).publishToMap).toBe(false);
+  });
   it("includes reviewed facts, confirmed coordinates, preparation date and manual attachment reminder", () => {
     const report = prepareReport(validReportInput());
     expect(report.status).toBe("draft_prepared");

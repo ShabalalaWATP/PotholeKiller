@@ -24,6 +24,8 @@ export const CreatureSchema = z.object({
 const imageHashSchema = z.string().regex(/^[a-f0-9]{64}$/);
 const descriptionSchema = z.string().trim().min(10).max(2000);
 const notesSchema = z.string().trim().max(1000);
+const reporterNameSchema = z.string().refine(value => !/[\u0000-\u001f\u007f]/.test(value), "Use a name without control characters.")
+  .transform(value => value.trim()).pipe(z.string().min(2).max(80)).default("Not supplied");
 const landmarkSchema = z.string().trim().max(200).refine(
   (value) => !/[\u0000-\u001f\u007f]/.test(value),
   "Keep the street or landmark on one line.",
@@ -33,6 +35,7 @@ export const ReportInputSchema = z.object({
   analysis: DefectAnalysisSchema,
   description: descriptionSchema,
   notes: notesSchema,
+  reporterName: reporterNameSchema,
   landmark: landmarkSchema,
   location: LocationSchema,
   locationConfirmed: z.literal(true),
@@ -40,10 +43,15 @@ export const ReportInputSchema = z.object({
   authority: AuthoritySchema.default("unknown"),
   councilContact: CouncilContactSchema.optional(),
   scanReceiptId: z.uuid().optional(),
+  publishToMap: z.boolean().default(false),
+  communityIssueId: z.uuid().optional(),
   isDemo: z.boolean(),
   imageHash: imageHashSchema,
   monsterProfile: MonsterProfileSchema,
   preparedAt: z.iso.datetime().optional(),
+}).refine(data => !data.isDemo || !data.publishToMap, {
+  message: "Mock reports cannot be published to the real community map.",
+  path: ["publishToMap"],
 });
 
 export const ReportRecordSchema = z.object({
@@ -57,10 +65,13 @@ export const ReportRecordSchema = z.object({
   contentReviewed: z.literal(true),
   description: descriptionSchema,
   notes: notesSchema,
+  reporterName: reporterNameSchema,
   landmark: landmarkSchema,
   authority: AuthoritySchema,
   councilContact: CouncilContactSchema.optional(),
   scanReceiptId: z.uuid().optional(),
+  publishToMap: z.boolean().default(false),
+  communityIssueId: z.uuid().optional(),
   isDemo: z.boolean(),
   subject: z.string().min(1).max(400),
   body: z.string().min(1).max(10000),
@@ -72,6 +83,9 @@ export const ReportRecordSchema = z.object({
   message: "Only a confidently identified visible road defect can be captured.",
 }).refine((record) => !record.isDemo || record.status === "draft_prepared", {
   message: "Example reports cannot be handed off or marked submitted.",
+}).refine(record => !record.isDemo || !record.publishToMap, {
+  message: "Mock reports cannot be published to the real community map.",
+  path: ["publishToMap"],
 }).refine((record) => record.monsterProfile.firstObservedOn === null ||
   record.monsterProfile.firstObservedOn <= record.preparedAt.slice(0, 10), {
   message: "The first-noticed date cannot be after report preparation.",
@@ -124,6 +138,7 @@ export function prepareReport(input: ReportInput): ReportRecord {
   const body = [
     ...(data.isDemo ? ["DEMONSTRATION ONLY. FICTIONAL LOCATION. DO NOT SEND TO A COUNCIL.", ""] : []),
     "Road surface defect report, prepared for human review",
+    `Reported by: ${data.reporterName}`,
     "",
     `Suspected defect type: ${defect}`,
     `Reviewed description: ${data.description}`,

@@ -1,6 +1,6 @@
 # Submission materials
 
-**Status: baseline source/video are public. Expanded local checks/build passed; latest hosted/runtime verification and matching footage remain pending. Identity is enabled; preview database/migration and shared auth/board behaviour are unverified. Alex O is solo; contact is private. Organisers have not released their link. Submission has not been sent or confirmed.**
+**Status: baseline source/video are public. Latest 15:49 build/types and focused repair checks passed; 416-test coverage is historical. Profile preview `6ae75c622086dbea5bf72fdc` deployed with isolated DB/base SQL staged, but runtime health is unchecked and repair preview is next. Identity is enabled; canonical callback needs production approval after preview verification. Alex O is solo, contact private, organisers' link unreleased and submission unsent.**
 
 The supplied event brief sets a strict 17:00 London deadline on 1 November 2026, with a target submission time of 16:45. Use the organiser's actual submission route. The event page is [DevDay Exchange Community Hackathon](https://luma.com/dde-ldn-hack); it is not assumed to be the submission form.
 
@@ -10,13 +10,13 @@ The supplied event brief sets a strict 17:00 London deadline on 1 November 2026,
 
 **Tagline:** Hunt potholes. Earn XP. Save your streets.
 
-**Description:** PotholeKiller turns road-damage documentation into an original monster-collecting game. Users review visual findings, find a UK address/reporting route, confirm the road pin and prepare a useful draft. Optional type and first-noticed observations power a creature and award 60 to 110 local XP once per photograph, without classifying engineering danger. Guest collectors work locally; optional signed-in shared profiles count eligible new live uploads through server receipts. Shared hosting setup is not yet verified. Fictional samples cannot email councils or increase community scores.
+**Description:** PotholeKiller turns road documentation into monster collecting: review visible findings, find a UK route, confirm the pin and prepare a draft. Capture rewards are 60 to 110 XP from self-reported observations. A labelled world of sixty fictional issues and twenty mock collectors demonstrates the loop. Optional real profiles support explicit public-road opt-in and weighted community repair marking, with once-only reporter credits. Community-marked fixed is not proof of council repair. Hosted runtime remains unverified; samples cannot email councils or earn real community credit.
 
 **Meaningful OpenAI use:** The server-side Responses API adapter sends a validated, metadata-stripped image and requests a structured assessment of visible road damage. Zod validates the response, and conservative eligibility rules reject uncertain or unrelated images. Factual observations stay separate from humorous character copy. Predefined sample outputs are visibly labelled.
 
-**Concrete Codex example:** Codex implemented vision/upload protection, reviewed reports, power/duplicate rules, UK authority lookup and server-owned collector profiles. Final local check passed 416 tests in 23 files, including ten real in-memory SQL, 21 client-race and 33 storage/API tests. Coverage: 98.98% lines, 98.4% statements, 95.81% branches, 96.17% functions, excluding React components/hooks/browser image utility. Expanded build passed. Hosted regressions and matching footage remain pending. [Build notes](../CODEX_BUILD_NOTES.md) link evidence. No hosted shared-auth/database success is claimed.
+**Concrete Codex example:** Codex implemented vision/upload protection, reviewed reports, UK lookup, power, shared collectors and opt-in road/repair rules. The last full pre-repair check passed 416 tests: 98.98% lines, 98.4% statements, 95.81% branches, 96.17% functions, excluding React components/hooks/browser image utility. Latest repair work passed five vital rule and six database/auth/concurrency checks plus the 15:49 build/types. No new full coverage is claimed. [Build notes](../CODEX_BUILD_NOTES.md) link evidence; latest hosted regressions/footage remain pending.
 
-**Original work and credits:** The core application, original creature templates, schematic hunt map and delivery docs were created for this build. Existing open-source dependencies and three existing sample photographs are credited in the [README](../README.md) and [asset credits](ASSET_CREDITS.md).
+**Original work and credits:** The application, creature art and docs were created for this build. Existing software, photographs and OSM road geometry retain their source/licence credits in [asset credits](ASSET_CREDITS.md) and [demo data credits](DEMO_DATA_CREDITS.md). Demo issues/users/report links are explicitly fictional and never seed real Identity accounts.
 
 ## Links and required details
 
@@ -27,18 +27,19 @@ The supplied event brief sets a strict 17:00 London deadline on 1 November 2026,
 | Team members | Alex O, solo. |
 | Contact | Supplied privately and kept in ignored local submission notes. Do not copy the address into the public repository. |
 | Video, maximum 90 seconds | [Baseline video](https://github.com/ShabalalaWATP/PotholeKiller/releases/download/hackathon-demo-2026/potholekiller-hackathon.webm) in the [prerelease](https://github.com/ShabalalaWATP/PotholeKiller/releases/tag/hackathon-demo-2026): 47.56 seconds, silent 1280 × 900 VP9. Real AI/earlier 60 XP flow, without expanded lookup/collectors. Replacement pending. [Recording notes](DEMO_SCRIPT.md). |
-| Working app | [Preview URL](https://hackathon--potholekiller-hackney.netlify.app). Latest expanded deployment/runtime verification pending. Identity enabled at 15:24; preview database/migration and hosted account/board checks pending. No production publication or Git continuous deployment. |
+| Working app | [Preview alias](https://hackathon--potholekiller-hackney.netlify.app). Profile deployment `6ae75c622086dbea5bf72fdc` completed; runtime health unchecked. Isolated hackathon DB/base SQL staged; repair preview/additive SQL and hosted checks pending. No production publication or Git continuous deployment. |
 | Organiser form | The organisers have not released the submission link yet, as confirmed by the entrant. Await their actual form. |
 | Submission confirmation | Record the real confirmation and time after submitting. |
 
 ## Final checks
 
-- [x] Record final 416-test full check, expanded coverage and passing build.
+- [x] Record historical 416-test full coverage separately from latest five rule/six DB checks and 15:49 build/types.
 - [x] Record manual Identity enablement at 15:24.
-- [ ] Verify latest preview/database migration and hosted sign-in, ownership, opt-in and real shared captures.
+- [x] Record profile preview deployment and isolated database/base SQL staging.
+- [ ] Verify repair preview/schema, hosted auth, map opt-in, manual links, weighted votes, credits and mock/real separation.
 - [x] Record the passing desktop predefined-sample journey and production audit; disclose the scoped development dependency exception.
 - [x] Record genuine live pothole classification and croissant rejection, plus browser live-upload/fallback and portrait checks.
-- [x] Scan publishable source and browser bundles for the configured key, with no match; keep local environment and output directories ignored.
+- [x] Record no configured-key match in 166 source files/44 bundles; keep private environment/output ignored.
 - [x] Publish the intended GitHub content on the public default feature branch.
 - [x] Record green application/security CI, zero CodeQL alerts and enabled secret scanning/push protection.
 - [ ] Keep API keys, private files, logs and personal details out of source and video.

@@ -62,12 +62,12 @@ export const databaseCommunityRepository: CommunityRepository = {
     return transaction(async client => {
       const { rows } = await client.query<ProfileRow>(
         `SELECT p.display_name, p.avatar, p.published,
-           COUNT(c.image_hash)::integer AS captures,
-           COALESCE(SUM(c.awarded_xp), 0)::integer AS xp
+           (SELECT COUNT(*)::integer FROM collector_captures c WHERE c.user_id = p.id) AS captures,
+           ((SELECT COALESCE(SUM(c.awarded_xp), 0) FROM collector_captures c WHERE c.user_id = p.id)
+             + (SELECT COALESCE(SUM(reports.report_bonus), 0) FROM road_issue_reports reports WHERE reports.user_id = p.id)
+             + (SELECT COALESCE(SUM(r.bonus_xp), 0) FROM collector_repair_rewards r WHERE r.user_id = p.id))::integer AS xp
          FROM collector_profiles p
-         LEFT JOIN collector_captures c ON c.user_id = p.id
-         WHERE p.id = $1
-         GROUP BY p.id`, [userId],
+         WHERE p.id = $1`, [userId],
       );
       return rows[0] ? profile(rows[0]) : null;
     });
@@ -76,12 +76,12 @@ export const databaseCommunityRepository: CommunityRepository = {
     return transaction(async client => {
       const { rows } = await client.query<ProfileRow>(
         `SELECT p.display_name, p.avatar, p.published,
-           COUNT(c.image_hash)::integer AS captures,
-           COALESCE(SUM(c.awarded_xp), 0)::integer AS xp
+           (SELECT COUNT(*)::integer FROM collector_captures c WHERE c.user_id = p.id) AS captures,
+           ((SELECT COALESCE(SUM(c.awarded_xp), 0) FROM collector_captures c WHERE c.user_id = p.id)
+             + (SELECT COALESCE(SUM(reports.report_bonus), 0) FROM road_issue_reports reports WHERE reports.user_id = p.id)
+             + (SELECT COALESCE(SUM(r.bonus_xp), 0) FROM collector_repair_rewards r WHERE r.user_id = p.id))::integer AS xp
          FROM collector_profiles p
-         LEFT JOIN collector_captures c ON c.user_id = p.id
          WHERE p.published = TRUE
-         GROUP BY p.id
          ORDER BY captures DESC, xp DESC, p.created_at ASC, p.id ASC
          LIMIT 20`,
       );

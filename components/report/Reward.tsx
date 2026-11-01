@@ -8,8 +8,10 @@ import type { ReportRecord, ReportStatus } from "@/lib/reporting/report";
 import MonsterPower from "@/components/game/MonsterPower";
 import { monsterPower } from "@/lib/game/power";
 
-export default function Reward({ report, awardedXp, onHunt, onStatus, saveError, communityNotice }: {
+export default function Reward({ report, awardedXp, onHunt, onStatus, saveError, communityNotice, onShare, shareError, shared = false, reportBonus }: {
   report: ReportRecord; awardedXp: number; onHunt: () => void; onStatus: (status: ReportStatus) => void; saveError?: string; communityNotice?: string;
+  onShare?: () => Promise<unknown>; shareError?: string | null; shared?: boolean;
+  reportBonus?: { xp: number; ordinal: number };
 }) {
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
@@ -30,6 +32,7 @@ export default function Reward({ report, awardedXp, onHunt, onStatus, saveError,
       <h3>{report.creature.name}</h3><p>“{report.creature.description}”</p><div className="card-bottom"><Check size={14} /> ADDED TO YOUR POTHOLEDEX</div>
     </div><div className="reward-details">
       <div className="xp-reward"><Trophy size={30} /><strong>+{awardedXp} <span>XP</span></strong></div>
+      {reportBonus && <p className="notice" role="status">{reportBonus.xp > 0 ? `+${reportBonus.xp} community XP as reporter #${reportBonus.ordinal}.` : `Already counted as reporter #${reportBonus.ordinal}. No repeat reporting bonus.`}</p>}
       <MonsterPower profile={report.monsterProfile} asOf={report.preparedAt} isDemo={report.isDemo} />
       {awardedXp > 0 && power.bonusXp > 0 && <p className="tiny muted">60 report XP + {power.sizeBonus} extent XP + {power.ageBonus} age XP. Award fixed at capture.</p>}
       <p>{awardedXp ? "Useful evidence. Properly documented. Nicely done, hunter." : "Already in your collection. Each photograph earns XP once."}</p>
@@ -42,6 +45,10 @@ export default function Reward({ report, awardedXp, onHunt, onStatus, saveError,
       {!report.isDemo && report.status !== "submitted_by_user" && <label className="check-label"><input type="checkbox" checked={false} onChange={event => { if (event.target.checked) onStatus("submitted_by_user"); }} /> I have submitted this report myself.</label>}
       {saveError && <p className="error-message" role="alert">{saveError}</p>}
       {communityNotice && <p className="notice" role="status">{communityNotice}</p>}
+      {report.publishToMap && !report.isDemo && <div className="community-pin-result"><p className="tiny muted">{shared ? "Road pin shared. Your capture XP and reporting bonus are awarded again when the repair threshold is reached." : "Public road-pin sharing was selected. If the update is pending, you can retry after saving your collector profile."}</p>
+        {!shared && onShare && <button type="button" className="text-button" onClick={() => void onShare()}>Retry community map update <ArrowUpRight size={15} /></button>}
+        {shareError && <p className="error-message" role="alert">{shareError}</p>}
+      </div>}
     </div></div>
     <button className="text-button report-toggle" aria-expanded={showReport} onClick={() => setShowReport(!showReport)}>{showReport ? "Hide" : "Read"} the complete report <ArrowUpRight size={15} /></button>
     {copyError && <p className="error-message" role="alert">Clipboard unavailable. Select and copy the report below.</p>}

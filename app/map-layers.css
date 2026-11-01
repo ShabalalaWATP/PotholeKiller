@@ -108,6 +108,41 @@
   background: #123044;
 }
 
+.issue-cluster-icon {
+  border: 0;
+  background: transparent;
+}
+
+.issue-cluster-count {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 3px solid var(--navy);
+  border-radius: 19px 21px 18px 20px;
+  background: #b8e2c5;
+  color: var(--navy);
+  box-shadow: 4px 4px 0 #fffdf6, 5px 5px 0 2px #123044, 0 4px 12px #091c3026;
+  font: 700 20px/1 var(--font-sans), sans-serif;
+}
+
+.issue-cluster-power {
+  position: absolute;
+  right: -3px;
+  bottom: 0;
+  padding: 3px 6px;
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+  background: var(--yellow);
+  color: var(--navy);
+  font: 700 10px/1 var(--font-sans), sans-serif;
+}
+
+.marker-family-cracking { border-radius: 18% 45% 25% 40%; transform: rotate(-5deg); }
+.marker-family-cracking::before { transform: rotate(-35deg); }
+.marker-family-small { border-radius: 48% 48% 42% 42%; }
+.marker-family-large { border-radius: 34% 34% 24% 24%; }
+
 .map-layer-notice {
   position: absolute;
   z-index: 550;

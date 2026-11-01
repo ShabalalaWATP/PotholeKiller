@@ -30,7 +30,7 @@ afterAll(async () => {
 
 beforeEach(async () => {
   // This is the test-owned in-memory database, never a hosted connection.
-  await database.exec("TRUNCATE collector_captures, scan_receipts, collector_profiles");
+  await database.exec("TRUNCATE collector_captures, scan_receipts, collector_profiles CASCADE");
 });
 
 async function collect(userId: string, imageHash: string, awardedXp = 60) {

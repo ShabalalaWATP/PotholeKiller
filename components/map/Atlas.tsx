@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import type { MapLeafletProps } from "./MapLeaflet";
+export type { MapIssue, MapLeafletProps } from "./MapLeaflet";
 
 const MapLeaflet = dynamic(() => import("./MapLeaflet"), {
   ssr: false,
