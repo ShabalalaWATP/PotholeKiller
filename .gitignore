@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+dist/
+coverage/
+output/
+.env*
+!.env.example
+*.tsbuildinfo
+.vercel/
+.DS_Store
+Thumbs.db
+*.log
+.playwright-cli/
