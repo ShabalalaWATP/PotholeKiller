@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" fill="none">
+  <title>Original schematic game map of the Hackney pilot area</title>
+  <desc>Fictional street geometry for demonstration. Use the geographic map and coordinates to confirm a real report location.</desc>
+  <defs>
+    <pattern id="blocks" width="150" height="135" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <rect x="12" y="12" width="54" height="35" rx="6" fill="#D1D9E1"/>
+      <rect x="77" y="12" width="52" height="35" rx="6" fill="#D1D9E1"/>
+      <rect x="12" y="60" width="32" height="50" rx="6" fill="#D5DCE4"/>
+      <rect x="55" y="60" width="74" height="50" rx="6" fill="#D5DCE4"/>
+    </pattern>
+    <pattern id="grass" width="35" height="35" patternUnits="userSpaceOnUse"><path d="m10 15 3-4 3 4m10 10 2-3 2 3" stroke="#87C7AD" stroke-width="2" stroke-linecap="round"/></pattern>
+    <g id="tree"><ellipse cy="8" rx="12" ry="7" fill="#68AA94" opacity=".2"/><path d="M0 3v11" stroke="#48766B" stroke-width="4" stroke-linecap="round"/><path d="M-12-2c-4-9 3-15 9-14 5-12 20-4 18 4 7 8 2 16-5 16H-5c-6 0-9-1-7-6Z" fill="#78BDA2"/><path d="M-5-8c-2-4 4-7 7-5" stroke="#A6DBC0" stroke-width="3" stroke-linecap="round"/></g>
+    <g id="house"><rect x="-15" y="-8" width="30" height="27" rx="3" fill="#C1CCD9"/><path d="m-19-8 19-17 19 17Z" fill="#AFBDCC"/><rect x="-3" y="5" width="7" height="14" rx="2" fill="#E6EBEF"/></g>
+    <g id="station"><circle r="11" fill="#D17D5A" stroke="#F6F2E9" stroke-width="5"/><path d="M-15 0h30" stroke="#21384E" stroke-width="7"/></g>
+  </defs>
+  <path fill="#E0E5EB" d="M0 0h1600v1100H0z"/>
+  <path fill="url(#blocks)" opacity=".8" d="M0 0h1600v1100H0z"/>
+  <g fill="#B9DDC6" stroke="#AAD4BB" stroke-width="5">
+    <path d="m880-30 229 8 52 103-53 153-157 36-74-89-55-92Z"/>
+    <path d="m748 436 203-13 51 69-43 165-102 64-135-30-28-105Z"/>
+    <path d="m1197 779 212-27 147 152 45 196h-354l-93-95Z"/>
+    <path d="m118 721 136-37 113 92-40 153-107 27-128-73Z"/>
+    <path d="m1374 129 147-11 79 143v225l-114-27-89-171Z"/>
+  </g>
+  <g fill="url(#grass)"><path d="m880-30 229 8 52 103-53 153-157 36-74-89-55-92Z"/><path d="m748 436 203-13 51 69-43 165-102 64-135-30-28-105Z"/><path d="m1197 779 212-27 147 152 45 196h-354l-93-95Z"/><path d="m118 721 136-37 113 92-40 153-107 27-128-73Z"/></g>
+  <g stroke="#BAC7D3" stroke-width="33" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-40 309c256-19 388-31 592-53 243-26 529 60 1088 84"/>
+    <path d="M394-30c-42 233-60 388 21 563s88 310 41 607"/>
+    <path d="M735-30c-43 144-46 283-27 405s-95 339-162 450l-67 307"/>
+    <path d="m1181-30-34 169-58 160-32 117 42 157 31 190 86 337"/>
+    <path d="M-30 586c243-28 395-28 558-38l182-143 353-4 261 131 316 26"/>
+    <path d="M-20 991c288-128 488-224 706-234 307-15 541 88 935-69"/>
+  </g>
+  <g stroke="#FBF8ED" stroke-width="23" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-40 309c256-19 388-31 592-53 243-26 529 60 1088 84"/>
+    <path d="M394-30c-42 233-60 388 21 563s88 310 41 607"/>
+    <path d="M735-30c-43 144-46 283-27 405s-95 339-162 450l-67 307"/>
+    <path d="m1181-30-34 169-58 160-32 117 42 157 31 190 86 337"/>
+    <path d="M-30 586c243-28 395-28 558-38l182-143 353-4 261 131 316 26"/>
+    <path d="M-20 991c288-128 488-224 706-234 307-15 541 88 935-69"/>
+  </g>
+  <g stroke="#F9F7F0" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m-20 120 248 3 122 62 169-19 152-31M-20 420l215-14 170 49 204-10 111 42M30 712l195-66 181 22 166-6M73-20l-17 330 53 285M227-20l-5 337-24 102 30 236M489-20l-5 274 53 133 22 54M607-20l-45 276 19 97 102 31M-20 842l119-3m193-5 129-45 149 30 139 85 371-13 80 12M296 1100l16-186M78 1100l-12-130M653 1100l55-196 64-138M846 1100l-3-179 62-137M1006 1100l-27-202M1296-20l-44 210 24 128 89 88 13 121 131 198M1428-20l-65 148-107 23M1600 71l-193 41M1183 123l124 47m-180 68 131 28 342-18M1100 470l170-8 330 28M1123 639l144 4 33-116M1252 1100l-20-167M1514 600l-1 148M530 538l36 116M666 629l-78-3M711 349l335 32M801 264l-23 123M963 287l-16 100M952 728l26 57M1343 671l16-139"/>
+  </g>
+  <g stroke="#D0AE9E" stroke-width="11" stroke-linecap="round"><path d="M-20 524c339-25 546-91 736-207S1269 189 1620 217"/><path d="M-20 524c339-25 546-91 736-207S1269 189 1620 217" stroke="#F4DDD1" stroke-width="5" stroke-dasharray="5 12"/></g>
+  <path d="M-30 1030c241-9 352-65 487-72 234-11 294 126 517 105 263-24 353-126 647-110" stroke="#EAF8FA" stroke-width="66"/>
+  <path d="M-30 1030c241-9 352-65 487-72 234-11 294 126 517 105 263-24 353-126 647-110" stroke="#9CCCD9" stroke-width="48"/>
+  <path d="m53 1027 60-4m171-28 54-13m365 18 56 22m338 8 57-15m305-61 58-1" stroke="#C5E7ED" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#E5DBCD" stroke="#FAF8F0" stroke-width="7"><path d="m442 932 65 1 2 52-65 3Z"/><path d="m793 1024 58 5-1 71h-61Z"/><path d="m1191 975 59-14 12 57-58 17Z"/></g>
+  <g stroke="#92BC9E" stroke-width="4" stroke-dasharray="5 9"><path d="m898 4 47 140 143 80M759 465l135 91 53 71M1218 816l99 159 200 66"/></g>
+  <g>
+    <use href="#tree" x="897" y="99"/><use href="#tree" x="918" y="126"/><use href="#tree" x="1082" y="101"/><use href="#tree" x="1099" y="128"/><use href="#tree" x="984" y="204"/><use href="#tree" x="1037" y="43"/>
+    <use href="#tree" x="757" y="500"/><use href="#tree" x="740" y="531"/><use href="#tree" x="940" y="490"/><use href="#tree" x="923" y="657"/><use href="#tree" x="808" y="658"/><use href="#tree" x="782" y="631"/>
+    <use href="#tree" x="174" y="752"/><use href="#tree" x="147" y="790"/><use href="#tree" x="286" y="864"/><use href="#tree" x="222" y="903"/>
+    <use href="#tree" x="1304" y="822"/><use href="#tree" x="1340" y="851"/><use href="#tree" x="1479" y="1036"/><use href="#tree" x="1278" y="1068"/><use href="#tree" x="1371" y="1073"/>
+    <use href="#tree" x="1456" y="204"/><use href="#tree" x="1527" y="260"/><use href="#tree" x="1456" y="349"/>
+    <use href="#house" x="150" y="226"/><use href="#house" x="275" y="562"/><use href="#house" x="608" y="109"/><use href="#house" x="1011" y="679"/><use href="#house" x="1329" y="371"/><use href="#house" x="1409" y="615"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#42576D" font-size="18" font-weight="700" letter-spacing="3" text-anchor="middle">
+    <text x="491" y="95" transform="rotate(-7 491 95)">DALSTON</text>
+    <text x="981" y="163" fill="#4A7E67">HACKNEY</text><text x="981" y="188" fill="#4A7E67">DOWNS</text>
+    <text x="1155" y="373" transform="rotate(5 1155 373)">HACKNEY CENTRAL</text>
+    <text x="843" y="565" fill="#4A7E67">LONDON</text><text x="843" y="591" fill="#4A7E67">FIELDS</text>
+    <text x="239" y="832" fill="#4A7E67">HOXTON</text>
+    <text x="1317" y="930" fill="#4A7E67">VICTORIA</text><text x="1317" y="956" fill="#4A7E67">PARK</text>
+    <text x="615" y="701" font-size="14" letter-spacing="2" transform="rotate(-57 615 701)">MARE STREET</text>
+    <text x="385" y="322" font-size="14" letter-spacing="2" transform="rotate(-5 385 322)">DALSTON LANE</text>
+    <text x="1120" y="619" font-size="14" letter-spacing="2" transform="rotate(80 1120 619)">WELL STREET</text>
+    <text x="935" y="1030" font-size="14" letter-spacing="2" fill="#467D90" transform="rotate(-4 935 1030)">REGENT'S CANAL</text>
+  </g>
+  <use href="#station" x="361" y="468"/><use href="#station" x="708" y="321"/><use href="#station" x="1088" y="227"/>
+  <g fill="#A7BBCB" opacity=".6"><circle cx="1290" cy="50" r="3"/><circle cx="1310" cy="70" r="3"/><circle cx="1520" cy="830" r="3"/><circle cx="632" cy="497" r="3"/></g>
+</svg>

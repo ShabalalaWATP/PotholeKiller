@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# The Next.js runtime is detected and maintained by Netlify.
+# Configure API credentials and APP_ORIGIN in protected hosting variables.

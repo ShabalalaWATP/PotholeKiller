@@ -1,0 +1,43 @@
+{
+  "name": "potholekiller",
+  "version": "0.1.0",
+  "private": true,
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "test:live": "node tests/live-smoke.mjs",
+    "test:coverage": "vitest run --coverage",
+    "check": "npm run lint && npm run typecheck && npm run test:coverage"
+  },
+  "dependencies": {
+    "next": "^16.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "lucide-react": "^0.548.0",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^5.0.0",
+    "openai": "^6.7.0",
+    "zod": "^4.1.12",
+    "sharp": "^0.35.5",
+    "@fontsource/space-grotesk": "^5.2.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/leaflet": "^1.9.21",
+    "eslint": "9.39.5",
+    "eslint-config-next": "^16.0.1",
+    "vitest": "4.1.12",
+    "@vitest/coverage-v8": "4.1.12"
+  },
+  "overrides": { "sharp": "$sharp" }
+}
