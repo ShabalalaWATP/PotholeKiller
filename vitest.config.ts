@@ -8,7 +8,7 @@ export default defineConfig({
     include: ["tests/**/*.test.ts"],
     coverage: {
       provider: "v8",
-      include: ["lib/ai/**/*.ts", "lib/security/**/*.ts", "lib/game/**/*.ts", "lib/reporting/**/*.ts", "app/api/**/*.ts"],
+      include: ["lib/ai/**/*.ts", "lib/security/**/*.ts", "lib/game/**/*.ts", "lib/reporting/**/*.ts", "lib/location/**/*.ts", "lib/community/**/*.ts", "lib/client/collector-session.ts", "lib/client/collector-identity.ts", "lib/client/community.ts", "app/api/**/*.ts", "netlify/functions/**/*.mts"],
       exclude: ["lib/ai/prompt.ts"],
       reporter: ["text", "html", "json-summary"],
       thresholds: { statements: 90, branches: 90, functions: 90, lines: 90 },

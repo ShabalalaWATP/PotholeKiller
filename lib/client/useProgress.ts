@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { addCapture, emptyGameState, recordRejection, updateReportStatus, type GameState } from "@/lib/game/progression";
+import { addCapture, attachScanReceipt, emptyGameState, recordRejection, updateReportStatus, type GameState } from "@/lib/game/progression";
 import { readGameState, saveGameState } from "@/lib/game/storage";
 import type { ReportRecord, ReportStatus } from "@/lib/reporting/report";
 
@@ -42,6 +42,10 @@ export default function useProgress() {
     capture(record: ReportRecord) {
       const result = addCapture(getSnapshot(), record);
       return { ...result, saveError: persist(result.state) };
+    },
+    attachReceipt(reportId: string, receiptId: string): { report: ReportRecord; saveError?: string } {
+      const result = attachScanReceipt(getSnapshot(), reportId, receiptId);
+      return { report: result.report, saveError: persist(result.state) };
     },
     reject() { return persist(recordRejection(getSnapshot())); },
     setStatus(id: string, status: ReportStatus) { return persist(updateReportStatus(getSnapshot(), id, status)); },

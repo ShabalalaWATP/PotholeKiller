@@ -1,4 +1,5 @@
 import { analysePhotograph } from "../../../lib/ai/analyse";
+import { maybeIssueScanReceipt } from "../../../lib/community/scan-receipt";
 import { RequestFailure } from "../../../lib/security/errors";
 import { sanitiseImage } from "../../../lib/security/image";
 import { chargeAnalysisAttempt, checkRateLimit, reserveAnalysis } from "../../../lib/security/limits";
@@ -20,7 +21,8 @@ export async function POST(request: Request): Promise<Response> {
       const imageDataUrl = await sanitiseImage(photograph);
       chargeAnalysisAttempt();
       const analysis = await analysePhotograph(imageDataUrl);
-      return Response.json({ analysis, source: "live" }, { headers: { "Cache-Control": "no-store" } });
+      const receipt = await maybeIssueScanReceipt(request, imageDataUrl, analysis);
+      return Response.json({ analysis, source: "live", ...receipt }, { headers: { "Cache-Control": "no-store" } });
     } finally {
       release();
     }

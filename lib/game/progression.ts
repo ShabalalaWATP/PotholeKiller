@@ -1,7 +1,8 @@
 import { z } from "zod";
 import { ReportRecordSchema, type ReportRecord, type ReportStatus } from "../reporting/report";
+import { BASE_CAPTURE_XP, monsterPower } from "./power";
 
-export const CAPTURE_XP = 60;
+export const CAPTURE_XP = BASE_CAPTURE_XP;
 export const MAX_CAPTURES = 100;
 export const GameStateSchema = z.object({
   version: z.literal(1),
@@ -19,7 +20,7 @@ export function emptyGameState(): GameState {
 }
 
 export function playerProgress(state: GameState) {
-  const xp = state.captures.length * CAPTURE_XP;
+  const xp = state.captures.reduce((total, record) => total + captureXpForReport(record), 0);
   const level = Math.min(5, Math.floor(xp / 120) + 1);
   const ranks = ["Crater Cadet", "Road Ranger", "Asphalt Avenger", "Pothole Predator", "Lord of the Holes"];
   return {
@@ -31,6 +32,11 @@ export function playerProgress(state: GameState) {
     progress: level === 5 ? 100 : (xp % 120) / 120 * 100,
     collected: state.captures.length,
   };
+}
+
+/** Freeze rewards to the reviewed observations at capture, with no passive XP. */
+export function captureXpForReport(record: Pick<ReportRecord, "monsterProfile" | "preparedAt">): number {
+  return monsterPower(record.monsterProfile, record.preparedAt).captureXp;
 }
 
 export function achievements(state: GameState): Achievement[] {
@@ -53,13 +59,26 @@ export function addCapture(state: GameState, report: ReportRecord) {
   }
   return {
     state: { ...validatedState, captures: [...validatedState.captures, validatedReport] },
-    awardedXp: CAPTURE_XP,
+    awardedXp: captureXpForReport(validatedReport),
     duplicate: false,
   };
 }
 
 export function recordRejection(state: GameState): GameState {
   return { ...GameStateSchema.parse(state), rejectedScan: true };
+}
+
+/** Retain a fresh live-scan receipt without changing the original capture or its reward. */
+export function attachScanReceipt(state: GameState, id: string, receiptId: string): { state: GameState; report: ReportRecord } {
+  const validated = GameStateSchema.parse(state);
+  const validReceiptId = z.uuid().parse(receiptId);
+  const current = validated.captures.find(record => record.id === id);
+  if (!current) throw new Error("This report is not in your PotholeDex.");
+  const report = { ...current, scanReceiptId: validReceiptId };
+  return {
+    state: { ...validated, captures: validated.captures.map(record => record.id === id ? report : record) },
+    report,
+  };
 }
 
 export function updateReportStatus(state: GameState, id: string, status: ReportStatus): GameState {

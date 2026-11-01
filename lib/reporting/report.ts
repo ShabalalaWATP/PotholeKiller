@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { DefectAnalysisSchema, isCapturable } from "../ai/schema";
+import { MonsterProfileSchema, monsterPower } from "../game/power";
+import { CouncilContactSchema } from "../location/schema";
 
 export const LocationSchema = z.object({
   lat: z.number().finite().min(-90).max(90),
@@ -22,7 +24,10 @@ export const CreatureSchema = z.object({
 const imageHashSchema = z.string().regex(/^[a-f0-9]{64}$/);
 const descriptionSchema = z.string().trim().min(10).max(2000);
 const notesSchema = z.string().trim().max(1000);
-const landmarkSchema = z.string().trim().max(200);
+const landmarkSchema = z.string().trim().max(200).refine(
+  (value) => !/[\u0000-\u001f\u007f]/.test(value),
+  "Keep the street or landmark on one line.",
+);
 
 export const ReportInputSchema = z.object({
   analysis: DefectAnalysisSchema,
@@ -33,14 +38,18 @@ export const ReportInputSchema = z.object({
   locationConfirmed: z.literal(true),
   contentReviewed: z.literal(true),
   authority: AuthoritySchema.default("unknown"),
+  councilContact: CouncilContactSchema.optional(),
+  scanReceiptId: z.uuid().optional(),
   isDemo: z.boolean(),
   imageHash: imageHashSchema,
+  monsterProfile: MonsterProfileSchema,
   preparedAt: z.iso.datetime().optional(),
 });
 
 export const ReportRecordSchema = z.object({
   id: z.string().regex(/^capture-[a-f0-9]{64}$/),
   imageHash: imageHashSchema,
+  monsterProfile: MonsterProfileSchema,
   analysis: DefectAnalysisSchema,
   creature: CreatureSchema,
   location: LocationSchema,
@@ -50,6 +59,8 @@ export const ReportRecordSchema = z.object({
   notes: notesSchema,
   landmark: landmarkSchema,
   authority: AuthoritySchema,
+  councilContact: CouncilContactSchema.optional(),
+  scanReceiptId: z.uuid().optional(),
   isDemo: z.boolean(),
   subject: z.string().min(1).max(400),
   body: z.string().min(1).max(10000),
@@ -61,6 +72,10 @@ export const ReportRecordSchema = z.object({
   message: "Only a confidently identified visible road defect can be captured.",
 }).refine((record) => !record.isDemo || record.status === "draft_prepared", {
   message: "Example reports cannot be handed off or marked submitted.",
+}).refine((record) => record.monsterProfile.firstObservedOn === null ||
+  record.monsterProfile.firstObservedOn <= record.preparedAt.slice(0, 10), {
+  message: "The first-noticed date cannot be after report preparation.",
+  path: ["monsterProfile", "firstObservedOn"],
 });
 
 export type ReportInput = z.input<typeof ReportInputSchema>;
@@ -102,6 +117,8 @@ export function prepareReport(input: ReportInput): ReportRecord {
   }
 
   const preparedAt = data.preparedAt ?? new Date().toISOString();
+  // Validate relative dates before preparing either the game award or council draft.
+  monsterPower(data.monsterProfile, preparedAt);
   const defect = DEFECT_LABELS[data.analysis.defectType];
   const subject = `${data.isDemo ? "DEMONSTRATION ONLY: " : ""}${defect}${data.landmark ? ` near ${data.landmark}` : ""}`;
   const body = [
@@ -110,6 +127,12 @@ export function prepareReport(input: ReportInput): ReportRecord {
     "",
     `Suspected defect type: ${defect}`,
     `Reviewed description: ${data.description}`,
+    ...(data.monsterProfile.extent === "unknown" ? [] : [
+      `User-reported apparent extent: ${data.monsterProfile.extent} (qualitative estimate; no measurements supplied).`,
+    ]),
+    ...(data.monsterProfile.firstObservedOn === null ? [] : [
+      `First noticed by user: ${data.monsterProfile.firstObservedOn} (self-reported; does not establish defect age, council notification or repair history).`,
+    ]),
     "",
     `User-confirmed map pin: ${data.location.lat.toFixed(6)}, ${data.location.lng.toFixed(6)}`,
     `Street or landmark: ${data.landmark || "Not supplied"}`,
@@ -118,9 +141,15 @@ export function prepareReport(input: ReportInput): ReportRecord {
     "",
     "Please manually attach the original photograph before sending.",
     "The image assessment is a visual suggestion, not an engineering inspection. No precise dimensions or depth have been measured.",
-    data.authority === "hackney"
+    ...(data.councilContact ? [
+      `Suggested highway authority: ${data.councilContact.name}`,
+      `Official reporting route: ${data.councilContact.reportingUrl}`,
+      ...(data.councilContact.email ? [`Published reporting email: ${data.councilContact.email}`] : []),
+      `Contact source: ${data.councilContact.sourceUrl}`,
+      "The authority was suggested from the selected address or map location. Please verify that it maintains this road; some roads are private, trunk roads or maintained by another authority.",
+    ] : [data.authority === "hackney"
       ? "Hackney Council was selected by the user. Please verify that it maintains this road; some roads are private or maintained by another authority."
-      : "Highway authority not confirmed. Please verify the responsible authority before submitting this draft.",
+      : "Highway authority not confirmed. Please verify the responsible authority before submitting this draft."]),
     "Status: report draft prepared. No submission, receipt, acknowledgement or repair has been verified.",
   ].join("\n");
 

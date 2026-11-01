@@ -1,0 +1,20 @@
+.creature-power-aura {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: creature-power-breathe 2.8s ease-in-out infinite;
+}
+
+.creature-power-tier-3 .creature-power-aura {
+  animation-duration: 2s;
+}
+
+@keyframes creature-power-breathe {
+  0%, 100% { opacity: .65; transform: scale(.96); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .creature-power-aura {
+    animation: none;
+  }
+}

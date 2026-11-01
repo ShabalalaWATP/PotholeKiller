@@ -1,0 +1,3828 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/alphagov/local-links-manager/main/data/local-authorities.csv",
+  "sourceBlob": "0dce867d3e9411a6073f7a966265c4000dea046c",
+  "retrievedAt": "2026-11-01",
+  "licence": "MIT (alphagov/local-links-manager)",
+  "authorities": [
+    {
+      "code": "S12000033",
+      "name": "Aberdeen City Council",
+      "website": "https://www.aberdeencity.gov.uk/",
+      "slug": "aberdeen",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 1,
+      "parent": null
+    },
+    {
+      "code": "S12000034",
+      "name": "Aberdeenshire Council",
+      "website": "https://www.aberdeenshire.gov.uk/",
+      "slug": "aberdeenshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 2,
+      "parent": null
+    },
+    {
+      "code": "E07000223",
+      "name": "Adur District Council",
+      "website": "https://www.adur-worthing.gov.uk/",
+      "slug": "adur",
+      "country": "England",
+      "tier": 2,
+      "id": 3,
+      "parent": 400
+    },
+    {
+      "code": "E07000032",
+      "name": "Amber Valley Borough Council",
+      "website": "https://www.ambervalley.gov.uk/",
+      "slug": "amber-valley",
+      "country": "England",
+      "tier": 2,
+      "id": 5,
+      "parent": 101
+    },
+    {
+      "code": "S12000041",
+      "name": "Angus Council",
+      "website": "https://www.angus.gov.uk/",
+      "slug": "angus",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 6,
+      "parent": null
+    },
+    {
+      "code": "N09000001",
+      "name": "Antrim and Newtownabbey Borough Council",
+      "website": "https://antrimandnewtownabbey.gov.uk/",
+      "slug": "antrim-newtownabbey",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 7,
+      "parent": null
+    },
+    {
+      "code": "N09000011",
+      "name": "Ards and North Down Borough Council",
+      "website": "https://www.ardsandnorthdown.gov.uk/",
+      "slug": "ards-and-north-down",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 8,
+      "parent": null
+    },
+    {
+      "code": "S12000035",
+      "name": "Argyll and Bute Council",
+      "website": "https://www.argyll-bute.gov.uk/",
+      "slug": "argyll-and-bute",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 9,
+      "parent": null
+    },
+    {
+      "code": "N09000002",
+      "name": "Armagh City, Banbridge and Craigavon Borough Council",
+      "website": "https://www.armaghbanbridgecraigavon.gov.uk/",
+      "slug": "armagh-banbridge-craigavon",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 10,
+      "parent": null
+    },
+    {
+      "code": "E07000224",
+      "name": "Arun District Council",
+      "website": "https://www.arun.gov.uk/",
+      "slug": "arun",
+      "country": "England",
+      "tier": 2,
+      "id": 11,
+      "parent": 400
+    },
+    {
+      "code": "E07000170",
+      "name": "Ashfield District Council",
+      "website": "https://www.ashfield.gov.uk/",
+      "slug": "ashfield",
+      "country": "England",
+      "tier": 2,
+      "id": 12,
+      "parent": 260
+    },
+    {
+      "code": "E07000105",
+      "name": "Ashford Borough Council",
+      "website": "https://www.ashford.gov.uk/",
+      "slug": "ashford",
+      "country": "England",
+      "tier": 2,
+      "id": 13,
+      "parent": 188
+    },
+    {
+      "code": "E07000200",
+      "name": "Babergh District Council",
+      "website": "https://www.babergh.gov.uk/",
+      "slug": "babergh",
+      "country": "England",
+      "tier": 2,
+      "id": 15,
+      "parent": 348
+    },
+    {
+      "code": "E08000016",
+      "name": "Barnsley Metropolitan Borough Council",
+      "website": "https://www.barnsley.gov.uk/",
+      "slug": "barnsley",
+      "country": "England",
+      "tier": 3,
+      "id": 18,
+      "parent": null
+    },
+    {
+      "code": "E07000066",
+      "name": "Basildon Borough Council",
+      "website": "https://www.basildon.gov.uk/",
+      "slug": "basildon",
+      "country": "England",
+      "tier": 2,
+      "id": 20,
+      "parent": 134
+    },
+    {
+      "code": "E07000084",
+      "name": "Basingstoke and Deane Borough Council",
+      "website": "https://www.basingstoke.gov.uk/",
+      "slug": "basingstoke-and-deane",
+      "country": "England",
+      "tier": 2,
+      "id": 21,
+      "parent": 160
+    },
+    {
+      "code": "E07000171",
+      "name": "Bassetlaw District Council",
+      "website": "https://www.bassetlaw.gov.uk/",
+      "slug": "bassetlaw",
+      "country": "England",
+      "tier": 2,
+      "id": 22,
+      "parent": 260
+    },
+    {
+      "code": "E06000022",
+      "name": "Bath and North East Somerset Council",
+      "website": "https://www.bathnes.gov.uk/",
+      "slug": "bath-and-north-east-somerset",
+      "country": "England",
+      "tier": 3,
+      "id": 23,
+      "parent": null
+    },
+    {
+      "code": "E06000055",
+      "name": "Bedford Borough Council",
+      "website": "https://www.bedford.gov.uk/",
+      "slug": "bedford",
+      "country": "England",
+      "tier": 3,
+      "id": 24,
+      "parent": null
+    },
+    {
+      "code": "N09000003",
+      "name": "Belfast City Council",
+      "website": "https://www.belfastcity.gov.uk/",
+      "slug": "belfast",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 25,
+      "parent": null
+    },
+    {
+      "code": "E08000025",
+      "name": "Birmingham City Council",
+      "website": "https://www.birmingham.gov.uk/",
+      "slug": "birmingham",
+      "country": "England",
+      "tier": 3,
+      "id": 27,
+      "parent": null
+    },
+    {
+      "code": "E07000129",
+      "name": "Blaby District Council",
+      "website": "https://www.blaby.gov.uk/",
+      "slug": "blaby",
+      "country": "England",
+      "tier": 2,
+      "id": 28,
+      "parent": 200
+    },
+    {
+      "code": "E06000008",
+      "name": "Blackburn with Darwen Borough Council",
+      "website": "https://www.blackburn.gov.uk/",
+      "slug": "blackburn-with-darwen",
+      "country": "England",
+      "tier": 3,
+      "id": 29,
+      "parent": null
+    },
+    {
+      "code": "E06000009",
+      "name": "Blackpool Borough Council",
+      "website": "https://www.blackpool.gov.uk/Home.aspx",
+      "slug": "blackpool",
+      "country": "England",
+      "tier": 3,
+      "id": 30,
+      "parent": null
+    },
+    {
+      "code": "W06000019",
+      "name": "Blaenau Gwent County Borough Council",
+      "website": "https://www.blaenau-gwent.gov.uk/",
+      "slug": "blaenau-gwent",
+      "country": "Wales",
+      "tier": 3,
+      "id": 31,
+      "parent": null
+    },
+    {
+      "code": "E07000033",
+      "name": "Bolsover District Council",
+      "website": "https://www.bolsover.gov.uk/",
+      "slug": "bolsover",
+      "country": "England",
+      "tier": 2,
+      "id": 32,
+      "parent": 101
+    },
+    {
+      "code": "E08000001",
+      "name": "Bolton Metropolitan Borough Council",
+      "website": "https://www.bolton.gov.uk/",
+      "slug": "bolton",
+      "country": "England",
+      "tier": 3,
+      "id": 33,
+      "parent": null
+    },
+    {
+      "code": "E07000146",
+      "name": "Borough Council of Kings Lynn and West Norfolk",
+      "website": "https://www.west-norfolk.gov.uk/",
+      "slug": "kings-lynn-and-west-norfolk",
+      "country": "England",
+      "tier": 2,
+      "id": 190,
+      "parent": 239
+    },
+    {
+      "code": "E07000095",
+      "name": "Borough of Broxbourne",
+      "website": "https://www.broxbourne.gov.uk/",
+      "slug": "broxbourne",
+      "country": "England",
+      "tier": 2,
+      "id": 48,
+      "parent": 171
+    },
+    {
+      "code": "E07000136",
+      "name": "Boston Borough Council",
+      "website": "https://www.boston.gov.uk/",
+      "slug": "boston",
+      "country": "England",
+      "tier": 2,
+      "id": 34,
+      "parent": 205
+    },
+    {
+      "code": "E06000058",
+      "name": "Bournemouth, Christchurch and Poole Council",
+      "website": "https://www.bcpcouncil.gov.uk/",
+      "slug": "bournemouth-christchurch-poole",
+      "country": "England",
+      "tier": 3,
+      "id": 419,
+      "parent": null
+    },
+    {
+      "code": "E06000036",
+      "name": "Bracknell Forest Council",
+      "website": "https://www.bracknell-forest.gov.uk/",
+      "slug": "bracknell-forest",
+      "country": "England",
+      "tier": 3,
+      "id": 36,
+      "parent": null
+    },
+    {
+      "code": "E07000067",
+      "name": "Braintree District Council",
+      "website": "https://www.braintree.gov.uk/",
+      "slug": "braintree",
+      "country": "England",
+      "tier": 2,
+      "id": 38,
+      "parent": 134
+    },
+    {
+      "code": "E07000143",
+      "name": "Breckland Council",
+      "website": "https://www.breckland.gov.uk/",
+      "slug": "breckland",
+      "country": "England",
+      "tier": 2,
+      "id": 39,
+      "parent": 239
+    },
+    {
+      "code": "E07000068",
+      "name": "Brentwood Borough Council",
+      "website": "https://www.brentwood.gov.uk/",
+      "slug": "brentwood",
+      "country": "England",
+      "tier": 2,
+      "id": 41,
+      "parent": 134
+    },
+    {
+      "code": "W06000013",
+      "name": "Bridgend County Borough Council",
+      "website": "https://www.bridgend.gov.uk/",
+      "slug": "bridgend",
+      "country": "Wales",
+      "tier": 3,
+      "id": 42,
+      "parent": null
+    },
+    {
+      "code": "E06000043",
+      "name": "Brighton and Hove City Council",
+      "website": "https://www.brighton-hove.gov.uk/",
+      "slug": "brighton-and-hove",
+      "country": "England",
+      "tier": 3,
+      "id": 43,
+      "parent": null
+    },
+    {
+      "code": "E06000023",
+      "name": "Bristol City Council",
+      "website": "https://www.bristol.gov.uk/",
+      "slug": "bristol",
+      "country": "England",
+      "tier": 3,
+      "id": 44,
+      "parent": null
+    },
+    {
+      "code": "E07000144",
+      "name": "Broadland District Council",
+      "website": "https://www.southnorfolkandbroadland.gov.uk/",
+      "slug": "broadland",
+      "country": "England",
+      "tier": 2,
+      "id": 45,
+      "parent": 239
+    },
+    {
+      "code": "E07000234",
+      "name": "Bromsgrove District Council",
+      "website": "https://www.bromsgrove.gov.uk/",
+      "slug": "bromsgrove",
+      "country": "England",
+      "tier": 2,
+      "id": 47,
+      "parent": 411
+    },
+    {
+      "code": "E07000172",
+      "name": "Broxtowe Borough Council",
+      "website": "https://www.broxtowe.gov.uk/",
+      "slug": "broxtowe",
+      "country": "England",
+      "tier": 2,
+      "id": 49,
+      "parent": 260
+    },
+    {
+      "code": "E06000060",
+      "name": "Buckinghamshire Council",
+      "website": "https://www.buckinghamshire.gov.uk/",
+      "slug": "buckinghamshire",
+      "country": "England",
+      "tier": 3,
+      "id": 50,
+      "parent": null
+    },
+    {
+      "code": "E07000117",
+      "name": "Burnley Borough Council",
+      "website": "https://www.burnley.gov.uk/",
+      "slug": "burnley",
+      "country": "England",
+      "tier": 2,
+      "id": 51,
+      "parent": 196
+    },
+    {
+      "code": "E08000002",
+      "name": "Bury Metropolitan Borough Council",
+      "website": "https://www.bury.gov.uk/",
+      "slug": "bury",
+      "country": "England",
+      "tier": 3,
+      "id": 52,
+      "parent": null
+    },
+    {
+      "code": "W06000018",
+      "name": "Caerphilly County Borough Council",
+      "website": "https://www.caerphilly.gov.uk/",
+      "slug": "caerphilly",
+      "country": "Wales",
+      "tier": 3,
+      "id": 53,
+      "parent": null
+    },
+    {
+      "code": "E08000033",
+      "name": "Calderdale Metropolitan Borough Council",
+      "website": "https://www.calderdale.gov.uk/",
+      "slug": "calderdale",
+      "country": "England",
+      "tier": 3,
+      "id": 54,
+      "parent": null
+    },
+    {
+      "code": "E07000008",
+      "name": "Cambridge City Council",
+      "website": "https://www.cambridge.gov.uk/",
+      "slug": "cambridge",
+      "country": "England",
+      "tier": 2,
+      "id": 55,
+      "parent": 56
+    },
+    {
+      "code": "E10000003",
+      "name": "Cambridgeshire County Council",
+      "website": "https://www.cambridgeshire.gov.uk/",
+      "slug": "cambridgeshire",
+      "country": "England",
+      "tier": 1,
+      "id": 56,
+      "parent": null
+    },
+    {
+      "code": "E07000192",
+      "name": "Cannock Chase District Council",
+      "website": "https://www.cannockchasedc.gov.uk/",
+      "slug": "cannock-chase",
+      "country": "England",
+      "tier": 2,
+      "id": 58,
+      "parent": 335
+    },
+    {
+      "code": "E07000106",
+      "name": "Canterbury City Council",
+      "website": "https://www.canterbury.gov.uk/",
+      "slug": "canterbury",
+      "country": "England",
+      "tier": 2,
+      "id": 59,
+      "parent": 188
+    },
+    {
+      "code": "W06000010",
+      "name": "Carmarthenshire County Council",
+      "website": "https://www.carmarthenshire.gov.wales/home/council-services/",
+      "slug": "carmarthenshire",
+      "country": "Wales",
+      "tier": 3,
+      "id": 62,
+      "parent": null
+    },
+    {
+      "code": "E07000069",
+      "name": "Castle Point Borough Council",
+      "website": "https://www.castlepoint.gov.uk/",
+      "slug": "castle-point",
+      "country": "England",
+      "tier": 2,
+      "id": 63,
+      "parent": 134
+    },
+    {
+      "code": "N09000004",
+      "name": "Causeway Coast and Glens Borough Council",
+      "website": "https://www.causewaycoastandglens.gov.uk/",
+      "slug": "causeway-coast-and-glens",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 64,
+      "parent": null
+    },
+    {
+      "code": "E06000056",
+      "name": "Central Bedfordshire Council",
+      "website": "https://www.centralbedfordshire.gov.uk/",
+      "slug": "central-bedfordshire",
+      "country": "England",
+      "tier": 3,
+      "id": 65,
+      "parent": null
+    },
+    {
+      "code": "W06000008",
+      "name": "Ceredigion County Council",
+      "website": "https://www.ceredigion.gov.uk/",
+      "slug": "ceredigion",
+      "country": "Wales",
+      "tier": 3,
+      "id": 66,
+      "parent": null
+    },
+    {
+      "code": "E07000130",
+      "name": "Charnwood Borough Council",
+      "website": "https://www.charnwood.gov.uk/",
+      "slug": "charnwood",
+      "country": "England",
+      "tier": 2,
+      "id": 67,
+      "parent": 200
+    },
+    {
+      "code": "E07000070",
+      "name": "Chelmsford City Council",
+      "website": "https://www.chelmsford.gov.uk/",
+      "slug": "chelmsford",
+      "country": "England",
+      "tier": 2,
+      "id": 68,
+      "parent": 134
+    },
+    {
+      "code": "E07000078",
+      "name": "Cheltenham Borough Council",
+      "website": "https://www.cheltenham.gov.uk/",
+      "slug": "cheltenham",
+      "country": "England",
+      "tier": 2,
+      "id": 69,
+      "parent": 149
+    },
+    {
+      "code": "E07000177",
+      "name": "Cherwell District Council",
+      "website": "https://www.cherwell.gov.uk/",
+      "slug": "cherwell",
+      "country": "England",
+      "tier": 2,
+      "id": 70,
+      "parent": 266
+    },
+    {
+      "code": "E06000049",
+      "name": "Cheshire East Council",
+      "website": "https://www.cheshireeast.gov.uk/",
+      "slug": "cheshire-east",
+      "country": "England",
+      "tier": 3,
+      "id": 71,
+      "parent": null
+    },
+    {
+      "code": "E06000050",
+      "name": "Cheshire West and Chester Council",
+      "website": "https://www.cheshirewestandchester.gov.uk/",
+      "slug": "cheshire-west-and-chester",
+      "country": "England",
+      "tier": 3,
+      "id": 72,
+      "parent": null
+    },
+    {
+      "code": "E07000034",
+      "name": "Chesterfield Borough Council",
+      "website": "https://www.chesterfield.gov.uk/",
+      "slug": "chesterfield",
+      "country": "England",
+      "tier": 2,
+      "id": 73,
+      "parent": 101
+    },
+    {
+      "code": "E07000225",
+      "name": "Chichester District Council",
+      "website": "https://www.chichester.gov.uk/",
+      "slug": "chichester",
+      "country": "England",
+      "tier": 2,
+      "id": 74,
+      "parent": 400
+    },
+    {
+      "code": "E07000118",
+      "name": "Chorley Council",
+      "website": "https://www.chorley.gov.uk/",
+      "slug": "chorley",
+      "country": "England",
+      "tier": 2,
+      "id": 76,
+      "parent": 196
+    },
+    {
+      "code": "W06000011",
+      "name": "City and County of Swansea Council",
+      "website": "https://www.swansea.gov.uk/",
+      "slug": "swansea",
+      "country": "Wales",
+      "tier": 3,
+      "id": 354,
+      "parent": null
+    },
+    {
+      "code": "E08000032",
+      "name": "City of Bradford Metropolitan District Council",
+      "website": "https://www.bradford.gov.uk/",
+      "slug": "bradford",
+      "country": "England",
+      "tier": 3,
+      "id": 37,
+      "parent": null
+    },
+    {
+      "code": "W06000015",
+      "name": "City of Cardiff Council",
+      "website": "https://www.cardiff.gov.uk/",
+      "slug": "cardiff",
+      "country": "Wales",
+      "tier": 3,
+      "id": 60,
+      "parent": null
+    },
+    {
+      "code": "S12000036",
+      "name": "City of Edinburgh Council",
+      "website": "https://www.edinburgh.gov.uk/",
+      "slug": "edinburgh",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 79,
+      "parent": null
+    },
+    {
+      "code": "E07000138",
+      "name": "City of Lincoln Council",
+      "website": "https://www.lincoln.gov.uk/",
+      "slug": "lincoln",
+      "country": "England",
+      "tier": 2,
+      "id": 204,
+      "parent": 205
+    },
+    {
+      "code": "E09000001",
+      "name": "City of London Corporation",
+      "website": "https://www.cityoflondon.gov.uk/",
+      "slug": "city-of-london",
+      "country": "England",
+      "tier": 3,
+      "id": 78,
+      "parent": null
+    },
+    {
+      "code": "E09000033",
+      "name": "City of Westminster",
+      "website": "https://www.westminster.gov.uk/",
+      "slug": "westminster",
+      "country": "England",
+      "tier": 3,
+      "id": 80,
+      "parent": null
+    },
+    {
+      "code": "E08000031",
+      "name": "City of Wolverhampton Council",
+      "website": "https://www.wolverhampton.gov.uk/",
+      "slug": "wolverhampton",
+      "country": "England",
+      "tier": 3,
+      "id": 409,
+      "parent": null
+    },
+    {
+      "code": "E06000014",
+      "name": "City of York Council",
+      "website": "https://www.york.gov.uk/",
+      "slug": "york",
+      "country": "England",
+      "tier": 3,
+      "id": 418,
+      "parent": null
+    },
+    {
+      "code": "S12000005",
+      "name": "Clackmannanshire Council",
+      "website": "https://www.clacks.gov.uk/",
+      "slug": "clackmannanshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 81,
+      "parent": null
+    },
+    {
+      "code": "E07000071",
+      "name": "Colchester City Council",
+      "website": "https://www.colchester.gov.uk/",
+      "slug": "colchester",
+      "country": "England",
+      "tier": 2,
+      "id": 82,
+      "parent": 134
+    },
+    {
+      "code": "S12000013",
+      "name": "Comhairle nan Eilean Siar",
+      "website": "https://www.cne-siar.gov.uk/",
+      "slug": "eilean-siar",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 230,
+      "parent": null
+    },
+    {
+      "code": "W06000003",
+      "name": "Conwy County Borough Council",
+      "website": "https://www.conwy.gov.uk/",
+      "slug": "conwy",
+      "country": "Wales",
+      "tier": 3,
+      "id": 83,
+      "parent": null
+    },
+    {
+      "code": "E06000052",
+      "name": "Cornwall Council",
+      "website": "https://www.cornwall.gov.uk/",
+      "slug": "cornwall",
+      "country": "England",
+      "tier": 3,
+      "id": 86,
+      "parent": null
+    },
+    {
+      "code": "E07000079",
+      "name": "Cotswold District Council",
+      "website": "https://www.cotswold.gov.uk/",
+      "slug": "cotswold",
+      "country": "England",
+      "tier": 2,
+      "id": 87,
+      "parent": 149
+    },
+    {
+      "code": "E06000053",
+      "name": "Council of the Isles of Scilly",
+      "website": "https://www.scilly.gov.uk/",
+      "slug": "isles-of-scilly",
+      "country": "England",
+      "tier": 3,
+      "id": 185,
+      "parent": null
+    },
+    {
+      "code": "E08000026",
+      "name": "Coventry City Council",
+      "website": "https://www.coventry.gov.uk/",
+      "slug": "coventry",
+      "country": "England",
+      "tier": 3,
+      "id": 90,
+      "parent": null
+    },
+    {
+      "code": "E07000226",
+      "name": "Crawley Borough Council",
+      "website": "https://crawley.gov.uk/",
+      "slug": "crawley",
+      "country": "England",
+      "tier": 2,
+      "id": 92,
+      "parent": 400
+    },
+    {
+      "code": "E06000063",
+      "name": "Cumberland Council",
+      "website": "https://www.cumberland.gov.uk/",
+      "slug": "cumberland",
+      "country": "England",
+      "tier": 3,
+      "id": 426,
+      "parent": null
+    },
+    {
+      "code": "E07000096",
+      "name": "Dacorum Borough Council",
+      "website": "https://www.dacorum.gov.uk/",
+      "slug": "dacorum",
+      "country": "England",
+      "tier": 2,
+      "id": 95,
+      "parent": 171
+    },
+    {
+      "code": "E06000005",
+      "name": "Darlington Borough Council",
+      "website": "https://www.darlington.gov.uk/",
+      "slug": "darlington",
+      "country": "England",
+      "tier": 3,
+      "id": 96,
+      "parent": null
+    },
+    {
+      "code": "E07000107",
+      "name": "Dartford Borough Council",
+      "website": "https://www.dartford.gov.uk/",
+      "slug": "dartford",
+      "country": "England",
+      "tier": 2,
+      "id": 97,
+      "parent": 188
+    },
+    {
+      "code": "W06000004",
+      "name": "Denbighshire County Council",
+      "website": "https://www.denbighshire.gov.uk/",
+      "slug": "denbighshire",
+      "country": "Wales",
+      "tier": 3,
+      "id": 99,
+      "parent": null
+    },
+    {
+      "code": "E06000015",
+      "name": "Derby City",
+      "website": "https://www.derby.gov.uk/",
+      "slug": "derby",
+      "country": "England",
+      "tier": 3,
+      "id": 100,
+      "parent": null
+    },
+    {
+      "code": "E10000007",
+      "name": "Derbyshire County Council",
+      "website": "https://www.derbyshire.gov.uk/",
+      "slug": "derbyshire",
+      "country": "England",
+      "tier": 1,
+      "id": 101,
+      "parent": null
+    },
+    {
+      "code": "E07000035",
+      "name": "Derbyshire Dales District Council",
+      "website": "https://www.derbyshiredales.gov.uk/",
+      "slug": "derbyshire-dales",
+      "country": "England",
+      "tier": 2,
+      "id": 102,
+      "parent": 101
+    },
+    {
+      "code": "N09000005",
+      "name": "Derry City and Strabane District Council",
+      "website": "https://www.derrystrabane.com/",
+      "slug": "derry-strabane",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 103,
+      "parent": null
+    },
+    {
+      "code": "E10000008",
+      "name": "Devon County Council",
+      "website": "https://new.devon.gov.uk/",
+      "slug": "devon",
+      "country": "England",
+      "tier": 1,
+      "id": 104,
+      "parent": null
+    },
+    {
+      "code": "E08000017",
+      "name": "Doncaster Metropolitan Borough Council",
+      "website": "https://www.doncaster.gov.uk/",
+      "slug": "doncaster",
+      "country": "England",
+      "tier": 3,
+      "id": 105,
+      "parent": null
+    },
+    {
+      "code": "E06000059",
+      "name": "Dorset Council",
+      "website": "https://www.dorsetcouncil.gov.uk/",
+      "slug": "dorset",
+      "country": "England",
+      "tier": 3,
+      "id": 106,
+      "parent": null
+    },
+    {
+      "code": "E07000108",
+      "name": "Dover District Council",
+      "website": "https://www.dover.gov.uk/",
+      "slug": "dover",
+      "country": "England",
+      "tier": 2,
+      "id": 107,
+      "parent": 188
+    },
+    {
+      "code": "E08000027",
+      "name": "Dudley Metropolitan Borough Council",
+      "website": "https://www.dudley.gov.uk/",
+      "slug": "dudley",
+      "country": "England",
+      "tier": 3,
+      "id": 108,
+      "parent": null
+    },
+    {
+      "code": "S12000006",
+      "name": "Dumfries and Galloway Council",
+      "website": "https://www.dumgal.gov.uk/",
+      "slug": "dumfries-and-galloway",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 109,
+      "parent": null
+    },
+    {
+      "code": "S12000042",
+      "name": "Dundee City Council",
+      "website": "https://www.dundeecity.gov.uk/",
+      "slug": "dundee",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 110,
+      "parent": null
+    },
+    {
+      "code": "E06000047",
+      "name": "Durham County Council",
+      "website": "https://www.durham.gov.uk/",
+      "slug": "county-durham",
+      "country": "England",
+      "tier": 3,
+      "id": 88,
+      "parent": null
+    },
+    {
+      "code": "S12000008",
+      "name": "East Ayrshire Council",
+      "website": "https://www.east-ayrshire.gov.uk/",
+      "slug": "east-ayrshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 112,
+      "parent": null
+    },
+    {
+      "code": "E07000061",
+      "name": "Eastbourne Borough Council",
+      "website": "https://www.lewes-eastbourne.gov.uk/",
+      "slug": "eastbourne",
+      "country": "England",
+      "tier": 2,
+      "id": 113,
+      "parent": 127
+    },
+    {
+      "code": "E07000009",
+      "name": "East Cambridgeshire District Council",
+      "website": "https://www.eastcambs.gov.uk/",
+      "slug": "east-cambridgeshire",
+      "country": "England",
+      "tier": 2,
+      "id": 114,
+      "parent": 56
+    },
+    {
+      "code": "E07000040",
+      "name": "East Devon District Council",
+      "website": "https://eastdevon.gov.uk/",
+      "slug": "east-devon",
+      "country": "England",
+      "tier": 2,
+      "id": 115,
+      "parent": 104
+    },
+    {
+      "code": "S12000045",
+      "name": "East Dunbartonshire Council",
+      "website": "https://www.eastdunbarton.gov.uk/",
+      "slug": "east-dunbartonshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 117,
+      "parent": null
+    },
+    {
+      "code": "E07000085",
+      "name": "East Hampshire District Council",
+      "website": "https://www.easthants.gov.uk/",
+      "slug": "east-hampshire",
+      "country": "England",
+      "tier": 2,
+      "id": 118,
+      "parent": 160
+    },
+    {
+      "code": "E07000242",
+      "name": "East Hertfordshire District Council",
+      "website": "https://www.eastherts.gov.uk/",
+      "slug": "east-hertfordshire",
+      "country": "England",
+      "tier": 2,
+      "id": 119,
+      "parent": 171
+    },
+    {
+      "code": "E07000086",
+      "name": "Eastleigh Borough Council",
+      "website": "https://www.eastleigh.gov.uk/",
+      "slug": "eastleigh",
+      "country": "England",
+      "tier": 2,
+      "id": 120,
+      "parent": 160
+    },
+    {
+      "code": "E07000137",
+      "name": "East Lindsey District Council",
+      "website": "https://www.e-lindsey.gov.uk/",
+      "slug": "east-lindsey",
+      "country": "England",
+      "tier": 2,
+      "id": 121,
+      "parent": 205
+    },
+    {
+      "code": "S12000010",
+      "name": "East Lothian Council",
+      "website": "https://www.eastlothian.gov.uk/",
+      "slug": "east-lothian",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 122,
+      "parent": null
+    },
+    {
+      "code": "S12000011",
+      "name": "East Renfrewshire Council",
+      "website": "https://www.eastrenfrewshire.gov.uk/",
+      "slug": "east-renfrewshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 124,
+      "parent": null
+    },
+    {
+      "code": "E06000011",
+      "name": "East Riding of Yorkshire Council",
+      "website": "https://www.eastriding.gov.uk/",
+      "slug": "east-riding-of-yorkshire",
+      "country": "England",
+      "tier": 3,
+      "id": 125,
+      "parent": null
+    },
+    {
+      "code": "E07000193",
+      "name": "East Staffordshire Borough Council",
+      "website": "https://www.eaststaffsbc.gov.uk/",
+      "slug": "east-staffordshire",
+      "country": "England",
+      "tier": 2,
+      "id": 126,
+      "parent": 335
+    },
+    {
+      "code": "E07000244",
+      "name": "East Suffolk District Council",
+      "website": "https://www.eastsuffolk.gov.uk/",
+      "slug": "east-suffolk",
+      "country": "England",
+      "tier": 2,
+      "id": 420,
+      "parent": 348
+    },
+    {
+      "code": "E10000011",
+      "name": "East Sussex County Council",
+      "website": "https://www.eastsussex.gov.uk/",
+      "slug": "east-sussex",
+      "country": "England",
+      "tier": 1,
+      "id": 127,
+      "parent": null
+    },
+    {
+      "code": "E07000207",
+      "name": "Elmbridge Borough Council",
+      "website": "https://www.elmbridge.gov.uk/",
+      "slug": "elmbridge",
+      "country": "England",
+      "tier": 2,
+      "id": 129,
+      "parent": 350
+    },
+    {
+      "code": "E07000072",
+      "name": "Epping Forest District Council",
+      "website": "https://www.eppingforestdc.gov.uk/",
+      "slug": "epping-forest",
+      "country": "England",
+      "tier": 2,
+      "id": 131,
+      "parent": 134
+    },
+    {
+      "code": "E07000208",
+      "name": "Epsom and Ewell Borough Council",
+      "website": "https://www.epsom-ewell.gov.uk/",
+      "slug": "epsom-and-ewell",
+      "country": "England",
+      "tier": 2,
+      "id": 132,
+      "parent": 350
+    },
+    {
+      "code": "E07000036",
+      "name": "Erewash Borough Council",
+      "website": "https://www.erewash.gov.uk/",
+      "slug": "erewash",
+      "country": "England",
+      "tier": 2,
+      "id": 133,
+      "parent": 101
+    },
+    {
+      "code": "E10000012",
+      "name": "Essex County Council",
+      "website": "https://www.essex.gov.uk/",
+      "slug": "essex",
+      "country": "England",
+      "tier": 1,
+      "id": 134,
+      "parent": null
+    },
+    {
+      "code": "E07000041",
+      "name": "Exeter City Council",
+      "website": "https://exeter.gov.uk/",
+      "slug": "exeter",
+      "country": "England",
+      "tier": 2,
+      "id": 135,
+      "parent": 104
+    },
+    {
+      "code": "S12000014",
+      "name": "Falkirk Council",
+      "website": "https://www.falkirk.gov.uk/",
+      "slug": "falkirk",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 136,
+      "parent": null
+    },
+    {
+      "code": "E07000087",
+      "name": "Fareham Borough Council",
+      "website": "https://www.fareham.gov.uk/",
+      "slug": "fareham",
+      "country": "England",
+      "tier": 2,
+      "id": 137,
+      "parent": 160
+    },
+    {
+      "code": "E07000010",
+      "name": "Fenland District Council",
+      "website": "https://www.fenland.gov.uk/",
+      "slug": "fenland",
+      "country": "England",
+      "tier": 2,
+      "id": 138,
+      "parent": 56
+    },
+    {
+      "code": "N09000006",
+      "name": "Fermanagh and Omagh District Council",
+      "website": "https://www.fermanaghomagh.com/",
+      "slug": "fermanagh-omagh",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 139,
+      "parent": null
+    },
+    {
+      "code": "S12000015",
+      "name": "Fife Council",
+      "website": "https://www.fife.gov.uk/",
+      "slug": "fife",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 140,
+      "parent": null
+    },
+    {
+      "code": "W06000005",
+      "name": "Flintshire County Council",
+      "website": "https://www.flintshire.gov.uk/",
+      "slug": "flintshire",
+      "country": "Wales",
+      "tier": 3,
+      "id": 141,
+      "parent": null
+    },
+    {
+      "code": "E07000112",
+      "name": "Folkestone and Hythe District Council",
+      "website": "https://www.folkestone-hythe.gov.uk/home",
+      "slug": "folkestone-hythe",
+      "country": "England",
+      "tier": 2,
+      "id": 307,
+      "parent": 188
+    },
+    {
+      "code": "E07000080",
+      "name": "Forest of Dean District Council",
+      "website": "https://www.fdean.gov.uk/",
+      "slug": "forest-of-dean",
+      "country": "England",
+      "tier": 2,
+      "id": 143,
+      "parent": 149
+    },
+    {
+      "code": "E07000119",
+      "name": "Fylde Borough Council",
+      "website": "https://www.fylde.gov.uk/",
+      "slug": "fylde",
+      "country": "England",
+      "tier": 2,
+      "id": 144,
+      "parent": 196
+    },
+    {
+      "code": "E08000037",
+      "name": "Gateshead Metropolitan Borough Council",
+      "website": "https://www.gateshead.gov.uk/",
+      "slug": "gateshead",
+      "country": "England",
+      "tier": 3,
+      "id": 145,
+      "parent": null
+    },
+    {
+      "code": "E07000173",
+      "name": "Gedling Borough Council",
+      "website": "https://www.gedling.gov.uk/",
+      "slug": "gedling",
+      "country": "England",
+      "tier": 2,
+      "id": 146,
+      "parent": 260
+    },
+    {
+      "code": "S12000046",
+      "name": "Glasgow City Council",
+      "website": "https://www.glasgow.gov.uk/",
+      "slug": "glasgow",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 147,
+      "parent": null
+    },
+    {
+      "code": "E07000081",
+      "name": "Gloucester City Council",
+      "website": "https://www.gloucester.gov.uk/",
+      "slug": "gloucester",
+      "country": "England",
+      "tier": 2,
+      "id": 148,
+      "parent": 149
+    },
+    {
+      "code": "E10000013",
+      "name": "Gloucestershire County Council",
+      "website": "https://www.gloucestershire.gov.uk/",
+      "slug": "gloucestershire",
+      "country": "England",
+      "tier": 1,
+      "id": 149,
+      "parent": null
+    },
+    {
+      "code": "E07000088",
+      "name": "Gosport Borough Council",
+      "website": "https://www.gosport.gov.uk/",
+      "slug": "gosport",
+      "country": "England",
+      "tier": 2,
+      "id": 150,
+      "parent": 160
+    },
+    {
+      "code": "E07000109",
+      "name": "Gravesham Borough Council",
+      "website": "https://www.gravesham.gov.uk/",
+      "slug": "gravesham",
+      "country": "England",
+      "tier": 2,
+      "id": 151,
+      "parent": 188
+    },
+    {
+      "code": "E07000145",
+      "name": "Great Yarmouth Borough Council",
+      "website": "https://www.great-yarmouth.gov.uk/",
+      "slug": "great-yarmouth",
+      "country": "England",
+      "tier": 2,
+      "id": 152,
+      "parent": 239
+    },
+    {
+      "code": "E07000209",
+      "name": "Guildford Borough Council",
+      "website": "https://www.guildford.gov.uk/",
+      "slug": "guildford",
+      "country": "England",
+      "tier": 2,
+      "id": 154,
+      "parent": 350
+    },
+    {
+      "code": "W06000002",
+      "name": "Gwynedd Council",
+      "website": "https://www.gwynedd.llyw.cymru/",
+      "slug": "gwynedd",
+      "country": "Wales",
+      "tier": 3,
+      "id": 155,
+      "parent": null
+    },
+    {
+      "code": "E06000006",
+      "name": "Halton Borough Council",
+      "website": "https://www.halton.gov.uk/",
+      "slug": "halton",
+      "country": "England",
+      "tier": 3,
+      "id": 157,
+      "parent": null
+    },
+    {
+      "code": "E10000014",
+      "name": "Hampshire County Council",
+      "website": "https://www.hants.gov.uk/",
+      "slug": "hampshire",
+      "country": "England",
+      "tier": 1,
+      "id": 160,
+      "parent": null
+    },
+    {
+      "code": "E07000131",
+      "name": "Harborough District Council",
+      "website": "https://www.harborough.gov.uk/",
+      "slug": "harborough",
+      "country": "England",
+      "tier": 2,
+      "id": 161,
+      "parent": 200
+    },
+    {
+      "code": "E07000073",
+      "name": "Harlow Council",
+      "website": "https://www.harlow.gov.uk/",
+      "slug": "harlow",
+      "country": "England",
+      "tier": 2,
+      "id": 163,
+      "parent": 134
+    },
+    {
+      "code": "E07000089",
+      "name": "Hart District Council",
+      "website": "https://www.hart.gov.uk/",
+      "slug": "hart",
+      "country": "England",
+      "tier": 2,
+      "id": 166,
+      "parent": 160
+    },
+    {
+      "code": "E06000001",
+      "name": "Hartlepool Borough Council",
+      "website": "https://www.hartlepool.gov.uk/",
+      "slug": "hartlepool",
+      "country": "England",
+      "tier": 3,
+      "id": 167,
+      "parent": null
+    },
+    {
+      "code": "E07000062",
+      "name": "Hastings Borough Council",
+      "website": "https://www.hastings.gov.uk/",
+      "slug": "hastings",
+      "country": "England",
+      "tier": 2,
+      "id": 168,
+      "parent": 127
+    },
+    {
+      "code": "E07000090",
+      "name": "Havant Borough Council",
+      "website": "https://www.havant.gov.uk/",
+      "slug": "havant",
+      "country": "England",
+      "tier": 2,
+      "id": 169,
+      "parent": 160
+    },
+    {
+      "code": "E06000019",
+      "name": "Herefordshire Council",
+      "website": "https://www.herefordshire.gov.uk/",
+      "slug": "herefordshire",
+      "country": "England",
+      "tier": 3,
+      "id": 89,
+      "parent": null
+    },
+    {
+      "code": "E10000015",
+      "name": "Hertfordshire County Council",
+      "website": "https://www.hertfordshire.gov.uk/",
+      "slug": "hertfordshire",
+      "country": "England",
+      "tier": 1,
+      "id": 171,
+      "parent": null
+    },
+    {
+      "code": "E07000098",
+      "name": "Hertsmere Borough Council",
+      "website": "https://www.hertsmere.gov.uk/home.aspx",
+      "slug": "hertsmere",
+      "country": "England",
+      "tier": 2,
+      "id": 172,
+      "parent": 171
+    },
+    {
+      "code": "E07000037",
+      "name": "High Peak Borough Council",
+      "website": "https://www.highpeak.gov.uk/",
+      "slug": "high-peak",
+      "country": "England",
+      "tier": 2,
+      "id": 174,
+      "parent": 101
+    },
+    {
+      "code": "E07000132",
+      "name": "Hinckley and Bosworth Borough Council",
+      "website": "https://www.hinckley-bosworth.gov.uk/",
+      "slug": "hinckley-and-bosworth",
+      "country": "England",
+      "tier": 2,
+      "id": 176,
+      "parent": 200
+    },
+    {
+      "code": "E07000227",
+      "name": "Horsham District Council",
+      "website": "https://www.horsham.gov.uk/",
+      "slug": "horsham",
+      "country": "England",
+      "tier": 2,
+      "id": 177,
+      "parent": 400
+    },
+    {
+      "code": "E06000010",
+      "name": "Hull City Council",
+      "website": "https://www.hull.gov.uk/",
+      "slug": "kingston-upon-hull",
+      "country": "England",
+      "tier": 3,
+      "id": 191,
+      "parent": null
+    },
+    {
+      "code": "E07000011",
+      "name": "Huntingdonshire District Council",
+      "website": "https://www.huntingdonshire.gov.uk/",
+      "slug": "huntingdonshire",
+      "country": "England",
+      "tier": 2,
+      "id": 179,
+      "parent": 56
+    },
+    {
+      "code": "E07000120",
+      "name": "Hyndburn Borough Council",
+      "website": "https://www.hyndburnbc.gov.uk/",
+      "slug": "hyndburn",
+      "country": "England",
+      "tier": 2,
+      "id": 180,
+      "parent": 196
+    },
+    {
+      "code": "S12000018",
+      "name": "Inverclyde Council",
+      "website": "https://www.inverclyde.gov.uk/",
+      "slug": "inverclyde",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 181,
+      "parent": null
+    },
+    {
+      "code": "E07000202",
+      "name": "Ipswich Borough Council",
+      "website": "https://www.ipswich.gov.uk/",
+      "slug": "ipswich",
+      "country": "England",
+      "tier": 2,
+      "id": 182,
+      "parent": 348
+    },
+    {
+      "code": "W06000001",
+      "name": "Isle of Anglesey County Council",
+      "website": "https://www.anglesey.gov.uk/",
+      "slug": "isle-of-anglesey",
+      "country": "Wales",
+      "tier": 3,
+      "id": 183,
+      "parent": null
+    },
+    {
+      "code": "E06000046",
+      "name": "Isle of Wight Council",
+      "website": "https://www.iow.gov.uk/",
+      "slug": "isle-of-wight",
+      "country": "England",
+      "tier": 3,
+      "id": 184,
+      "parent": null
+    },
+    {
+      "code": "E10000016",
+      "name": "Kent County Council",
+      "website": "https://www.kent.gov.uk/",
+      "slug": "kent",
+      "country": "England",
+      "tier": 1,
+      "id": 188,
+      "parent": null
+    },
+    {
+      "code": "E08000034",
+      "name": "Kirklees Council",
+      "website": "https://www.kirklees.gov.uk/",
+      "slug": "kirklees",
+      "country": "England",
+      "tier": 3,
+      "id": 193,
+      "parent": null
+    },
+    {
+      "code": "E08000011",
+      "name": "Knowsley Metropolitan Borough Council",
+      "website": "https://www.knowsley.gov.uk/",
+      "slug": "knowsley",
+      "country": "England",
+      "tier": 3,
+      "id": 194,
+      "parent": null
+    },
+    {
+      "code": "E10000017",
+      "name": "Lancashire County Council",
+      "website": "https://www.lancashire.gov.uk/",
+      "slug": "lancashire",
+      "country": "England",
+      "tier": 1,
+      "id": 196,
+      "parent": null
+    },
+    {
+      "code": "E07000121",
+      "name": "Lancaster City Council",
+      "website": "https://www.lancaster.gov.uk/",
+      "slug": "lancaster",
+      "country": "England",
+      "tier": 2,
+      "id": 197,
+      "parent": 196
+    },
+    {
+      "code": "E08000035",
+      "name": "Leeds City Council",
+      "website": "https://www.leeds.gov.uk/",
+      "slug": "leeds",
+      "country": "England",
+      "tier": 3,
+      "id": 198,
+      "parent": null
+    },
+    {
+      "code": "E06000016",
+      "name": "Leicester City Council",
+      "website": "https://www.leicester.gov.uk/",
+      "slug": "leicester",
+      "country": "England",
+      "tier": 3,
+      "id": 199,
+      "parent": null
+    },
+    {
+      "code": "E10000018",
+      "name": "Leicestershire County Council",
+      "website": "https://www.leicestershire.gov.uk/",
+      "slug": "leicestershire",
+      "country": "England",
+      "tier": 1,
+      "id": 200,
+      "parent": null
+    },
+    {
+      "code": "E07000063",
+      "name": "Lewes District Council",
+      "website": "https://www.lewes-eastbourne.gov.uk/",
+      "slug": "lewes",
+      "country": "England",
+      "tier": 2,
+      "id": 201,
+      "parent": 127
+    },
+    {
+      "code": "E07000194",
+      "name": "Lichfield District Council",
+      "website": "https://www.lichfielddc.gov.uk/",
+      "slug": "lichfield",
+      "country": "England",
+      "tier": 2,
+      "id": 203,
+      "parent": 335
+    },
+    {
+      "code": "E10000019",
+      "name": "Lincolnshire County Council",
+      "website": "https://www.lincolnshire.gov.uk/",
+      "slug": "lincolnshire",
+      "country": "England",
+      "tier": 1,
+      "id": 205,
+      "parent": null
+    },
+    {
+      "code": "N09000007",
+      "name": "Lisburn and Castlereagh City Council",
+      "website": "https://www.lisburncastlereagh.gov.uk/",
+      "slug": "lisburn-castlereagh",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 206,
+      "parent": null
+    },
+    {
+      "code": "E08000012",
+      "name": "Liverpool City Council",
+      "website": "https://liverpool.gov.uk/",
+      "slug": "liverpool",
+      "country": "England",
+      "tier": 3,
+      "id": 207,
+      "parent": null
+    },
+    {
+      "code": "E09000002",
+      "name": "London Borough of Barking and Dagenham",
+      "website": "https://www.lbbd.gov.uk/",
+      "slug": "barking-and-dagenham",
+      "country": "England",
+      "tier": 3,
+      "id": 16,
+      "parent": null
+    },
+    {
+      "code": "E09000003",
+      "name": "London Borough of Barnet",
+      "website": "https://www.barnet.gov.uk/",
+      "slug": "barnet",
+      "country": "England",
+      "tier": 3,
+      "id": 17,
+      "parent": null
+    },
+    {
+      "code": "E09000004",
+      "name": "London Borough of Bexley",
+      "website": "https://www.bexley.gov.uk/",
+      "slug": "bexley",
+      "country": "England",
+      "tier": 3,
+      "id": 26,
+      "parent": null
+    },
+    {
+      "code": "E09000005",
+      "name": "London Borough of Brent",
+      "website": "https://www.brent.gov.uk/",
+      "slug": "brent",
+      "country": "England",
+      "tier": 3,
+      "id": 40,
+      "parent": null
+    },
+    {
+      "code": "E09000006",
+      "name": "London Borough of Bromley",
+      "website": "https://www.bromley.gov.uk/",
+      "slug": "bromley",
+      "country": "England",
+      "tier": 3,
+      "id": 46,
+      "parent": null
+    },
+    {
+      "code": "E09000007",
+      "name": "London Borough of Camden",
+      "website": "https://www.camden.gov.uk/",
+      "slug": "camden",
+      "country": "England",
+      "tier": 3,
+      "id": 57,
+      "parent": null
+    },
+    {
+      "code": "E09000008",
+      "name": "London Borough of Croydon",
+      "website": "https://www.croydon.gov.uk/",
+      "slug": "croydon",
+      "country": "England",
+      "tier": 3,
+      "id": 93,
+      "parent": null
+    },
+    {
+      "code": "E09000009",
+      "name": "London Borough of Ealing",
+      "website": "https://www.ealing.gov.uk/",
+      "slug": "ealing",
+      "country": "England",
+      "tier": 3,
+      "id": 111,
+      "parent": null
+    },
+    {
+      "code": "E09000010",
+      "name": "London Borough of Enfield",
+      "website": "https://new.enfield.gov.uk/",
+      "slug": "enfield",
+      "country": "England",
+      "tier": 3,
+      "id": 130,
+      "parent": null
+    },
+    {
+      "code": "E09000012",
+      "name": "London Borough of Hackney",
+      "website": "https://www.hackney.gov.uk/",
+      "slug": "hackney",
+      "country": "England",
+      "tier": 3,
+      "id": 156,
+      "parent": null
+    },
+    {
+      "code": "E09000013",
+      "name": "London Borough of Hammersmith & Fulham",
+      "website": "https://www.lbhf.gov.uk/",
+      "slug": "hammersmith-and-fulham",
+      "country": "England",
+      "tier": 3,
+      "id": 159,
+      "parent": null
+    },
+    {
+      "code": "E09000014",
+      "name": "London Borough of Haringey",
+      "website": "https://www.haringey.gov.uk/",
+      "slug": "haringey",
+      "country": "England",
+      "tier": 3,
+      "id": 162,
+      "parent": null
+    },
+    {
+      "code": "E09000015",
+      "name": "London Borough of Harrow",
+      "website": "https://www.harrow.gov.uk/",
+      "slug": "harrow",
+      "country": "England",
+      "tier": 3,
+      "id": 165,
+      "parent": null
+    },
+    {
+      "code": "E09000016",
+      "name": "London Borough of Havering",
+      "website": "https://www.havering.gov.uk/",
+      "slug": "havering",
+      "country": "England",
+      "tier": 3,
+      "id": 170,
+      "parent": null
+    },
+    {
+      "code": "E09000017",
+      "name": "London Borough of Hillingdon",
+      "website": "https://www.hillingdon.gov.uk/",
+      "slug": "hillingdon",
+      "country": "England",
+      "tier": 3,
+      "id": 175,
+      "parent": null
+    },
+    {
+      "code": "E09000018",
+      "name": "London Borough of Hounslow",
+      "website": "https://www.hounslow.gov.uk/",
+      "slug": "hounslow",
+      "country": "England",
+      "tier": 3,
+      "id": 178,
+      "parent": null
+    },
+    {
+      "code": "E09000019",
+      "name": "London Borough of Islington",
+      "website": "https://www.islington.gov.uk/",
+      "slug": "islington",
+      "country": "England",
+      "tier": 3,
+      "id": 186,
+      "parent": null
+    },
+    {
+      "code": "E09000022",
+      "name": "London Borough of Lambeth",
+      "website": "https://www.lambeth.gov.uk/",
+      "slug": "lambeth",
+      "country": "England",
+      "tier": 3,
+      "id": 195,
+      "parent": null
+    },
+    {
+      "code": "E09000023",
+      "name": "London Borough of Lewisham",
+      "website": "https://lewisham.gov.uk/",
+      "slug": "lewisham",
+      "country": "England",
+      "tier": 3,
+      "id": 202,
+      "parent": null
+    },
+    {
+      "code": "E09000024",
+      "name": "London Borough of Merton",
+      "website": "https://www.merton.gov.uk/",
+      "slug": "merton",
+      "country": "England",
+      "tier": 3,
+      "id": 218,
+      "parent": null
+    },
+    {
+      "code": "E09000025",
+      "name": "London Borough of Newham",
+      "website": "https://www.newham.gov.uk/",
+      "slug": "newham",
+      "country": "England",
+      "tier": 3,
+      "id": 236,
+      "parent": null
+    },
+    {
+      "code": "E09000026",
+      "name": "London Borough of Redbridge",
+      "website": "https://www.redbridge.gov.uk/",
+      "slug": "redbridge",
+      "country": "England",
+      "tier": 3,
+      "id": 278,
+      "parent": null
+    },
+    {
+      "code": "E09000027",
+      "name": "London Borough of Richmond upon Thames",
+      "website": "https://www.richmond.gov.uk/",
+      "slug": "richmond-upon-thames",
+      "country": "England",
+      "tier": 3,
+      "id": 286,
+      "parent": null
+    },
+    {
+      "code": "E09000028",
+      "name": "London Borough of Southwark",
+      "website": "https://www.southwark.gov.uk/",
+      "slug": "southwark",
+      "country": "England",
+      "tier": 3,
+      "id": 332,
+      "parent": null
+    },
+    {
+      "code": "E09000029",
+      "name": "London Borough of Sutton",
+      "website": "https://www.sutton.gov.uk/",
+      "slug": "sutton",
+      "country": "England",
+      "tier": 3,
+      "id": 352,
+      "parent": null
+    },
+    {
+      "code": "E09000030",
+      "name": "London Borough of Tower Hamlets",
+      "website": "https://www.towerhamlets.gov.uk/",
+      "slug": "tower-hamlets",
+      "country": "England",
+      "tier": 3,
+      "id": 373,
+      "parent": null
+    },
+    {
+      "code": "E09000031",
+      "name": "London Borough of Waltham Forest",
+      "website": "https://www.walthamforest.gov.uk/",
+      "slug": "waltham-forest",
+      "country": "England",
+      "tier": 3,
+      "id": 380,
+      "parent": null
+    },
+    {
+      "code": "E09000032",
+      "name": "London Borough of Wandsworth",
+      "website": "https://www.wandsworth.gov.uk/",
+      "slug": "wandsworth",
+      "country": "England",
+      "tier": 3,
+      "id": 381,
+      "parent": null
+    },
+    {
+      "code": "E06000032",
+      "name": "Luton Borough Council",
+      "website": "https://www.luton.gov.uk/",
+      "slug": "luton",
+      "country": "England",
+      "tier": 3,
+      "id": 208,
+      "parent": null
+    },
+    {
+      "code": "E07000110",
+      "name": "Maidstone Borough Council",
+      "website": "https://www.maidstone.gov.uk/",
+      "slug": "maidstone",
+      "country": "England",
+      "tier": 2,
+      "id": 209,
+      "parent": 188
+    },
+    {
+      "code": "E07000074",
+      "name": "Maldon District Council",
+      "website": "https://www.maldon.gov.uk/",
+      "slug": "maldon",
+      "country": "England",
+      "tier": 2,
+      "id": 210,
+      "parent": 134
+    },
+    {
+      "code": "E07000235",
+      "name": "Malvern Hills District Council",
+      "website": "https://www.malvernhills.gov.uk/",
+      "slug": "malvern-hills",
+      "country": "England",
+      "tier": 2,
+      "id": 211,
+      "parent": 411
+    },
+    {
+      "code": "E08000003",
+      "name": "Manchester City Council",
+      "website": "https://www.manchester.gov.uk/",
+      "slug": "manchester",
+      "country": "England",
+      "tier": 3,
+      "id": 212,
+      "parent": null
+    },
+    {
+      "code": "E07000174",
+      "name": "Mansfield District Council",
+      "website": "https://www.mansfield.gov.uk/",
+      "slug": "mansfield",
+      "country": "England",
+      "tier": 2,
+      "id": 213,
+      "parent": 260
+    },
+    {
+      "code": "E06000035",
+      "name": "Medway Council",
+      "website": "https://www.medway.gov.uk/",
+      "slug": "medway",
+      "country": "England",
+      "tier": 3,
+      "id": 214,
+      "parent": null
+    },
+    {
+      "code": "E07000133",
+      "name": "Melton Borough Council",
+      "website": "https://www.melton.gov.uk/",
+      "slug": "melton",
+      "country": "England",
+      "tier": 2,
+      "id": 215,
+      "parent": 200
+    },
+    {
+      "code": "W06000024",
+      "name": "Merthyr Tydfil County Borough Council",
+      "website": "https://www.merthyr.gov.uk/",
+      "slug": "merthyr-tydfil",
+      "country": "Wales",
+      "tier": 3,
+      "id": 217,
+      "parent": null
+    },
+    {
+      "code": "N09000008",
+      "name": "Mid and East Antrim Borough Council",
+      "website": "https://www.midandeastantrim.gov.uk/",
+      "slug": "mid-and-east-antrim",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 219,
+      "parent": null
+    },
+    {
+      "code": "E07000042",
+      "name": "Mid Devon District Council",
+      "website": "https://www.middevon.gov.uk/",
+      "slug": "mid-devon",
+      "country": "England",
+      "tier": 2,
+      "id": 220,
+      "parent": 104
+    },
+    {
+      "code": "E06000002",
+      "name": "Middlesbrough Borough Council",
+      "website": "https://www.middlesbrough.gov.uk/",
+      "slug": "middlesbrough",
+      "country": "England",
+      "tier": 3,
+      "id": 221,
+      "parent": null
+    },
+    {
+      "code": "S12000019",
+      "name": "Midlothian Council",
+      "website": "https://www.midlothian.gov.uk/",
+      "slug": "midlothian",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 222,
+      "parent": null
+    },
+    {
+      "code": "E07000203",
+      "name": "Mid Suffolk District Council",
+      "website": "https://www.midsuffolk.gov.uk/",
+      "slug": "mid-suffolk",
+      "country": "England",
+      "tier": 2,
+      "id": 223,
+      "parent": 348
+    },
+    {
+      "code": "E07000228",
+      "name": "Mid Sussex District Council",
+      "website": "https://www.midsussex.gov.uk/",
+      "slug": "mid-sussex",
+      "country": "England",
+      "tier": 2,
+      "id": 224,
+      "parent": 400
+    },
+    {
+      "code": "N09000009",
+      "name": "Mid Ulster District Council",
+      "website": "https://www.midulstercouncil.org/",
+      "slug": "mid-ulster",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 225,
+      "parent": null
+    },
+    {
+      "code": "E06000042",
+      "name": "Milton Keynes City Council",
+      "website": "https://www.milton-keynes.gov.uk/",
+      "slug": "milton-keynes",
+      "country": "England",
+      "tier": 3,
+      "id": 226,
+      "parent": null
+    },
+    {
+      "code": "E07000210",
+      "name": "Mole Valley District Council",
+      "website": "https://www.molevalley.gov.uk/",
+      "slug": "mole-valley",
+      "country": "England",
+      "tier": 2,
+      "id": 227,
+      "parent": 350
+    },
+    {
+      "code": "W06000021",
+      "name": "Monmouthshire County Council",
+      "website": "https://www.monmouthshire.gov.uk/",
+      "slug": "monmouthshire",
+      "country": "Wales",
+      "tier": 3,
+      "id": 228,
+      "parent": null
+    },
+    {
+      "code": "W06000012",
+      "name": "Neath Port Talbot County Borough Council",
+      "website": "https://www.neath-porttalbot.gov.uk/",
+      "slug": "neath-port-talbot",
+      "country": "Wales",
+      "tier": 3,
+      "id": 231,
+      "parent": null
+    },
+    {
+      "code": "E07000175",
+      "name": "Newark and Sherwood District Council",
+      "website": "https://www.newark-sherwooddc.gov.uk/",
+      "slug": "newark-and-sherwood",
+      "country": "England",
+      "tier": 2,
+      "id": 232,
+      "parent": 260
+    },
+    {
+      "code": "E08000021",
+      "name": "Newcastle City Council",
+      "website": "https://www.newcastle.gov.uk/",
+      "slug": "newcastle-upon-tyne",
+      "country": "England",
+      "tier": 3,
+      "id": 234,
+      "parent": null
+    },
+    {
+      "code": "E07000195",
+      "name": "Newcastle-under-Lyme District Council",
+      "website": "https://www.newcastle-staffs.gov.uk/",
+      "slug": "newcastle-under-lyme",
+      "country": "England",
+      "tier": 2,
+      "id": 233,
+      "parent": 335
+    },
+    {
+      "code": "E07000091",
+      "name": "New Forest District Council",
+      "website": "https://www.newforest.gov.uk/",
+      "slug": "new-forest",
+      "country": "England",
+      "tier": 2,
+      "id": 235,
+      "parent": 160
+    },
+    {
+      "code": "W06000022",
+      "name": "Newport City Council",
+      "website": "https://www.newport.gov.uk/",
+      "slug": "newport",
+      "country": "Wales",
+      "tier": 3,
+      "id": 237,
+      "parent": null
+    },
+    {
+      "code": "N09000010",
+      "name": "Newry, Mourne and Down District Council",
+      "website": "https://www.newrymournedown.org/",
+      "slug": "newry-mourne-down",
+      "country": "Northern Ireland",
+      "tier": 3,
+      "id": 238,
+      "parent": null
+    },
+    {
+      "code": "E10000020",
+      "name": "Norfolk County Council",
+      "website": "https://www.norfolk.gov.uk/",
+      "slug": "norfolk",
+      "country": "England",
+      "tier": 1,
+      "id": 239,
+      "parent": null
+    },
+    {
+      "code": "S12000021",
+      "name": "North Ayrshire Council",
+      "website": "https://www.north-ayrshire.gov.uk/",
+      "slug": "north-ayrshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 242,
+      "parent": null
+    },
+    {
+      "code": "E07000043",
+      "name": "North Devon Council",
+      "website": "https://www.northdevon.gov.uk/",
+      "slug": "north-devon",
+      "country": "England",
+      "tier": 2,
+      "id": 243,
+      "parent": 104
+    },
+    {
+      "code": "E07000038",
+      "name": "North East Derbyshire District Council",
+      "website": "https://www.ne-derbyshire.gov.uk/",
+      "slug": "north-east-derbyshire",
+      "country": "England",
+      "tier": 2,
+      "id": 245,
+      "parent": 101
+    },
+    {
+      "code": "E06000012",
+      "name": "North East Lincolnshire Council",
+      "website": "https://www.nelincs.gov.uk/",
+      "slug": "north-east-lincolnshire",
+      "country": "England",
+      "tier": 3,
+      "id": 246,
+      "parent": null
+    },
+    {
+      "code": "E07000099",
+      "name": "North Hertfordshire District Council",
+      "website": "https://www.north-herts.gov.uk/",
+      "slug": "north-hertfordshire",
+      "country": "England",
+      "tier": 2,
+      "id": 247,
+      "parent": 171
+    },
+    {
+      "code": "E07000139",
+      "name": "North Kesteven District Council",
+      "website": "https://www.n-kesteven.gov.uk/",
+      "slug": "north-kesteven",
+      "country": "England",
+      "tier": 2,
+      "id": 248,
+      "parent": 205
+    },
+    {
+      "code": "S12000044",
+      "name": "North Lanarkshire Council",
+      "website": "https://www.northlanarkshire.gov.uk/",
+      "slug": "north-lanarkshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 249,
+      "parent": null
+    },
+    {
+      "code": "E06000013",
+      "name": "North Lincolnshire Council",
+      "website": "https://www.northlincs.gov.uk/",
+      "slug": "north-lincolnshire",
+      "country": "England",
+      "tier": 3,
+      "id": 250,
+      "parent": null
+    },
+    {
+      "code": "E07000147",
+      "name": "North Norfolk District Council",
+      "website": "https://www.north-norfolk.gov.uk/",
+      "slug": "north-norfolk",
+      "country": "England",
+      "tier": 2,
+      "id": 251,
+      "parent": 239
+    },
+    {
+      "code": "E06000061",
+      "name": "North Northamptonshire Council",
+      "website": "https://www.northnorthants.gov.uk/",
+      "slug": "north-northamptonshire",
+      "country": "England",
+      "tier": 3,
+      "id": 424,
+      "parent": null
+    },
+    {
+      "code": "E06000024",
+      "name": "North Somerset Council",
+      "website": "https://www.n-somerset.gov.uk/",
+      "slug": "north-somerset",
+      "country": "England",
+      "tier": 3,
+      "id": 252,
+      "parent": null
+    },
+    {
+      "code": "E08000022",
+      "name": "North Tyneside Council",
+      "website": "https://my.northtyneside.gov.uk/",
+      "slug": "north-tyneside",
+      "country": "England",
+      "tier": 3,
+      "id": 253,
+      "parent": null
+    },
+    {
+      "code": "E06000057",
+      "name": "Northumberland County Council",
+      "website": "https://www.northumberland.gov.uk/",
+      "slug": "northumberland",
+      "country": "England",
+      "tier": 3,
+      "id": 254,
+      "parent": null
+    },
+    {
+      "code": "E07000218",
+      "name": "North Warwickshire Borough Council",
+      "website": "https://www.northwarks.gov.uk/site/",
+      "slug": "north-warwickshire",
+      "country": "England",
+      "tier": 2,
+      "id": 255,
+      "parent": 384
+    },
+    {
+      "code": "E07000134",
+      "name": "North West Leicestershire District Council",
+      "website": "https://www.nwleics.gov.uk/",
+      "slug": "north-west-leicestershire",
+      "country": "England",
+      "tier": 2,
+      "id": 256,
+      "parent": 200
+    },
+    {
+      "code": "E10000023",
+      "name": "North Yorkshire County Council",
+      "website": "https://www.northyorks.gov.uk/",
+      "slug": "north-yorkshire",
+      "country": "England",
+      "tier": 3,
+      "id": 257,
+      "parent": null
+    },
+    {
+      "code": "E07000148",
+      "name": "Norwich City Council",
+      "website": "https://www.norwich.gov.uk/",
+      "slug": "norwich",
+      "country": "England",
+      "tier": 2,
+      "id": 258,
+      "parent": 239
+    },
+    {
+      "code": "E06000018",
+      "name": "Nottingham City Council",
+      "website": "https://www.nottinghamcity.gov.uk/",
+      "slug": "nottingham",
+      "country": "England",
+      "tier": 3,
+      "id": 259,
+      "parent": null
+    },
+    {
+      "code": "E10000024",
+      "name": "Nottinghamshire County Council",
+      "website": "https://www.nottinghamshire.gov.uk/",
+      "slug": "nottinghamshire",
+      "country": "England",
+      "tier": 1,
+      "id": 260,
+      "parent": null
+    },
+    {
+      "code": "E07000219",
+      "name": "Nuneaton and Bedworth Borough Council",
+      "website": "https://www.nuneatonandbedworth.gov.uk/site/",
+      "slug": "nuneaton-and-bedworth",
+      "country": "England",
+      "tier": 2,
+      "id": 261,
+      "parent": 384
+    },
+    {
+      "code": "E07000135",
+      "name": "Oadby and Wigston Borough Council",
+      "website": "https://www.oadby-wigston.gov.uk/",
+      "slug": "oadby-and-wigston",
+      "country": "England",
+      "tier": 2,
+      "id": 262,
+      "parent": 200
+    },
+    {
+      "code": "E08000004",
+      "name": "Oldham Metropolitan Borough Council",
+      "website": "https://www.oldham.gov.uk/",
+      "slug": "oldham",
+      "country": "England",
+      "tier": 3,
+      "id": 263,
+      "parent": null
+    },
+    {
+      "code": "S12000023",
+      "name": "Orkney Islands Council",
+      "website": "https://www.orkney.gov.uk/",
+      "slug": "orkney-islands",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 264,
+      "parent": null
+    },
+    {
+      "code": "E07000178",
+      "name": "Oxford City Council",
+      "website": "https://www.oxford.gov.uk/",
+      "slug": "oxford",
+      "country": "England",
+      "tier": 2,
+      "id": 265,
+      "parent": 266
+    },
+    {
+      "code": "E10000025",
+      "name": "Oxfordshire County Council",
+      "website": "https://www.oxfordshire.gov.uk/",
+      "slug": "oxfordshire",
+      "country": "England",
+      "tier": 1,
+      "id": 266,
+      "parent": null
+    },
+    {
+      "code": "W06000009",
+      "name": "Pembrokeshire County Council",
+      "website": "https://www.pembrokeshire.gov.uk/",
+      "slug": "pembrokeshire",
+      "country": "Wales",
+      "tier": 3,
+      "id": 267,
+      "parent": null
+    },
+    {
+      "code": "E07000122",
+      "name": "Pendle Borough Council",
+      "website": "https://www.pendle.gov.uk/",
+      "slug": "pendle",
+      "country": "England",
+      "tier": 2,
+      "id": 268,
+      "parent": 196
+    },
+    {
+      "code": "S12000024",
+      "name": "Perth and Kinross Council",
+      "website": "https://www.pkc.gov.uk/",
+      "slug": "perth-and-kinross",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 269,
+      "parent": null
+    },
+    {
+      "code": "E06000031",
+      "name": "Peterborough City Council",
+      "website": "https://www.peterborough.gov.uk/",
+      "slug": "peterborough",
+      "country": "England",
+      "tier": 3,
+      "id": 270,
+      "parent": null
+    },
+    {
+      "code": "E06000026",
+      "name": "Plymouth City Council",
+      "website": "https://www.plymouth.gov.uk/",
+      "slug": "plymouth",
+      "country": "England",
+      "tier": 3,
+      "id": 271,
+      "parent": null
+    },
+    {
+      "code": "E06000044",
+      "name": "Portsmouth City Council",
+      "website": "https://www.portsmouth.gov.uk/",
+      "slug": "portsmouth",
+      "country": "England",
+      "tier": 3,
+      "id": 273,
+      "parent": null
+    },
+    {
+      "code": "W06000023",
+      "name": "Powys County Council",
+      "website": "https://www.powys.gov.uk/",
+      "slug": "powys",
+      "country": "Wales",
+      "tier": 3,
+      "id": 274,
+      "parent": null
+    },
+    {
+      "code": "E07000123",
+      "name": "Preston City Council",
+      "website": "https://www.preston.gov.uk/",
+      "slug": "preston",
+      "country": "England",
+      "tier": 2,
+      "id": 275,
+      "parent": 196
+    },
+    {
+      "code": "E06000038",
+      "name": "Reading Borough Council",
+      "website": "https://www.reading.gov.uk/",
+      "slug": "reading",
+      "country": "England",
+      "tier": 3,
+      "id": 277,
+      "parent": null
+    },
+    {
+      "code": "E06000003",
+      "name": "Redcar and Cleveland Borough Council",
+      "website": "https://www.redcar-cleveland.gov.uk/",
+      "slug": "redcar-and-cleveland",
+      "country": "England",
+      "tier": 3,
+      "id": 279,
+      "parent": null
+    },
+    {
+      "code": "E07000236",
+      "name": "Redditch Borough Council",
+      "website": "https://www.redditchbc.gov.uk/",
+      "slug": "redditch",
+      "country": "England",
+      "tier": 2,
+      "id": 280,
+      "parent": 411
+    },
+    {
+      "code": "E07000211",
+      "name": "Reigate and Banstead Borough Council",
+      "website": "https://www.reigate-banstead.gov.uk/",
+      "slug": "reigate-and-banstead",
+      "country": "England",
+      "tier": 2,
+      "id": 281,
+      "parent": 350
+    },
+    {
+      "code": "S12000038",
+      "name": "Renfrewshire Council",
+      "website": "https://www.renfrewshire.gov.uk/",
+      "slug": "renfrewshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 282,
+      "parent": null
+    },
+    {
+      "code": "W06000016",
+      "name": "Rhondda Cynon Taf County Borough Council",
+      "website": "https://www.rctcbc.gov.uk/",
+      "slug": "rhondda-cynon-taff",
+      "country": "Wales",
+      "tier": 3,
+      "id": 283,
+      "parent": null
+    },
+    {
+      "code": "E07000124",
+      "name": "Ribble Valley Borough Council",
+      "website": "https://www.ribblevalley.gov.uk/",
+      "slug": "ribble-valley",
+      "country": "England",
+      "tier": 2,
+      "id": 284,
+      "parent": 196
+    },
+    {
+      "code": "E08000005",
+      "name": "Rochdale Metropolitan Borough Council",
+      "website": "https://www.rochdale.gov.uk/",
+      "slug": "rochdale",
+      "country": "England",
+      "tier": 3,
+      "id": 287,
+      "parent": null
+    },
+    {
+      "code": "E07000075",
+      "name": "Rochford District Council",
+      "website": "https://www.rochford.gov.uk/",
+      "slug": "rochford",
+      "country": "England",
+      "tier": 2,
+      "id": 288,
+      "parent": 134
+    },
+    {
+      "code": "E07000125",
+      "name": "Rossendale Borough Council",
+      "website": "https://www.rossendale.gov.uk/",
+      "slug": "rossendale",
+      "country": "England",
+      "tier": 2,
+      "id": 289,
+      "parent": 196
+    },
+    {
+      "code": "E07000064",
+      "name": "Rother District Council",
+      "website": "https://www.rother.gov.uk/",
+      "slug": "rother",
+      "country": "England",
+      "tier": 2,
+      "id": 290,
+      "parent": 127
+    },
+    {
+      "code": "E08000018",
+      "name": "Rotherham Metropolitan Borough Council",
+      "website": "https://www.rotherham.gov.uk/",
+      "slug": "rotherham",
+      "country": "England",
+      "tier": 3,
+      "id": 291,
+      "parent": null
+    },
+    {
+      "code": "E09000011",
+      "name": "Royal Borough of Greenwich",
+      "website": "https://www.royalgreenwich.gov.uk/",
+      "slug": "greenwich",
+      "country": "England",
+      "tier": 3,
+      "id": 153,
+      "parent": null
+    },
+    {
+      "code": "E09000020",
+      "name": "Royal Borough of Kensington and Chelsea",
+      "website": "https://www.rbkc.gov.uk/",
+      "slug": "kensington-and-chelsea",
+      "country": "England",
+      "tier": 3,
+      "id": 187,
+      "parent": null
+    },
+    {
+      "code": "E09000021",
+      "name": "Royal Borough of Kingston upon Thames",
+      "website": "https://www.kingston.gov.uk/",
+      "slug": "kingston-upon-thames",
+      "country": "England",
+      "tier": 3,
+      "id": 192,
+      "parent": null
+    },
+    {
+      "code": "E06000040",
+      "name": "Royal Borough of Windsor and Maidenhead",
+      "website": "https://www.rbwm.gov.uk/",
+      "slug": "windsor-and-maidenhead",
+      "country": "England",
+      "tier": 3,
+      "id": 405,
+      "parent": null
+    },
+    {
+      "code": "E07000220",
+      "name": "Rugby Borough Council",
+      "website": "https://www.rugby.gov.uk/",
+      "slug": "rugby",
+      "country": "England",
+      "tier": 2,
+      "id": 292,
+      "parent": 384
+    },
+    {
+      "code": "E07000212",
+      "name": "Runnymede Borough Council",
+      "website": "https://www.runnymede.gov.uk/",
+      "slug": "runnymede",
+      "country": "England",
+      "tier": 2,
+      "id": 293,
+      "parent": 350
+    },
+    {
+      "code": "E07000176",
+      "name": "Rushcliffe Borough Council",
+      "website": "https://www.rushcliffe.gov.uk/",
+      "slug": "rushcliffe",
+      "country": "England",
+      "tier": 2,
+      "id": 294,
+      "parent": 260
+    },
+    {
+      "code": "E07000092",
+      "name": "Rushmoor Borough Council",
+      "website": "https://www.rushmoor.gov.uk/",
+      "slug": "rushmoor",
+      "country": "England",
+      "tier": 2,
+      "id": 295,
+      "parent": 160
+    },
+    {
+      "code": "E06000017",
+      "name": "Rutland County Council",
+      "website": "https://www.rutland.gov.uk/",
+      "slug": "rutland",
+      "country": "England",
+      "tier": 3,
+      "id": 296,
+      "parent": null
+    },
+    {
+      "code": "E08000006",
+      "name": "Salford City Council",
+      "website": "https://www.salford.gov.uk/",
+      "slug": "salford",
+      "country": "England",
+      "tier": 3,
+      "id": 298,
+      "parent": null
+    },
+    {
+      "code": "E08000028",
+      "name": "Sandwell Metropolitan Borough Council",
+      "website": "https://www.sandwell.gov.uk/",
+      "slug": "sandwell",
+      "country": "England",
+      "tier": 3,
+      "id": 299,
+      "parent": null
+    },
+    {
+      "code": "S12000026",
+      "name": "Scottish Borders Council",
+      "website": "https://www.scotborders.gov.uk/",
+      "slug": "scottish-borders",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 301,
+      "parent": null
+    },
+    {
+      "code": "E08000014",
+      "name": "Sefton Metropolitan Borough Council",
+      "website": "https://www.sefton.gov.uk/",
+      "slug": "sefton",
+      "country": "England",
+      "tier": 3,
+      "id": 303,
+      "parent": null
+    },
+    {
+      "code": "E07000111",
+      "name": "Sevenoaks District Council",
+      "website": "https://www.sevenoaks.gov.uk/",
+      "slug": "sevenoaks",
+      "country": "England",
+      "tier": 2,
+      "id": 305,
+      "parent": 188
+    },
+    {
+      "code": "E08000019",
+      "name": "Sheffield City Council",
+      "website": "https://www.sheffield.gov.uk/",
+      "slug": "sheffield",
+      "country": "England",
+      "tier": 3,
+      "id": 306,
+      "parent": null
+    },
+    {
+      "code": "S12000027",
+      "name": "Shetland Islands Council",
+      "website": "https://www.shetland.gov.uk/",
+      "slug": "shetland-islands",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 308,
+      "parent": null
+    },
+    {
+      "code": "E06000051",
+      "name": "Shropshire Council",
+      "website": "https://www.shropshire.gov.uk/",
+      "slug": "shropshire",
+      "country": "England",
+      "tier": 3,
+      "id": 309,
+      "parent": null
+    },
+    {
+      "code": "E06000039",
+      "name": "Slough Borough Council",
+      "website": "https://www.slough.gov.uk/",
+      "slug": "slough",
+      "country": "England",
+      "tier": 3,
+      "id": 310,
+      "parent": null
+    },
+    {
+      "code": "E08000029",
+      "name": "Solihull Metropolitan Borough Council",
+      "website": "https://www.solihull.gov.uk/",
+      "slug": "solihull",
+      "country": "England",
+      "tier": 3,
+      "id": 311,
+      "parent": null
+    },
+    {
+      "code": "E10000027",
+      "name": "Somerset County Council",
+      "website": "https://www.somerset.gov.uk/",
+      "slug": "somerset",
+      "country": "England",
+      "tier": 3,
+      "id": 312,
+      "parent": null
+    },
+    {
+      "code": "E06000045",
+      "name": "Southampton City Council",
+      "website": "https://www.southampton.gov.uk/",
+      "slug": "southampton",
+      "country": "England",
+      "tier": 3,
+      "id": 313,
+      "parent": null
+    },
+    {
+      "code": "S12000028",
+      "name": "South Ayrshire Council",
+      "website": "https://www.south-ayrshire.gov.uk/",
+      "slug": "south-ayrshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 314,
+      "parent": null
+    },
+    {
+      "code": "E07000012",
+      "name": "South Cambridgeshire District Council",
+      "website": "https://www.scambs.gov.uk/",
+      "slug": "south-cambridgeshire",
+      "country": "England",
+      "tier": 2,
+      "id": 316,
+      "parent": 56
+    },
+    {
+      "code": "E07000039",
+      "name": "South Derbyshire District Council",
+      "website": "https://www.southderbyshire.gov.uk/",
+      "slug": "south-derbyshire",
+      "country": "England",
+      "tier": 2,
+      "id": 317,
+      "parent": 101
+    },
+    {
+      "code": "E06000033",
+      "name": "Southend-on-Sea City Council",
+      "website": "https://www.southend.gov.uk/",
+      "slug": "southend-on-sea",
+      "country": "England",
+      "tier": 3,
+      "id": 318,
+      "parent": null
+    },
+    {
+      "code": "E06000025",
+      "name": "South Gloucestershire Council",
+      "website": "https://www.southglos.gov.uk/",
+      "slug": "south-gloucestershire",
+      "country": "England",
+      "tier": 3,
+      "id": 319,
+      "parent": null
+    },
+    {
+      "code": "E07000044",
+      "name": "South Hams District Council",
+      "website": "https://www.southhams.gov.uk/",
+      "slug": "south-hams",
+      "country": "England",
+      "tier": 2,
+      "id": 320,
+      "parent": 104
+    },
+    {
+      "code": "E07000140",
+      "name": "South Holland District Council",
+      "website": "https://www.sholland.gov.uk/",
+      "slug": "south-holland",
+      "country": "England",
+      "tier": 2,
+      "id": 321,
+      "parent": 205
+    },
+    {
+      "code": "E07000141",
+      "name": "South Kesteven District Council",
+      "website": "https://www.southkesteven.gov.uk/",
+      "slug": "south-kesteven",
+      "country": "England",
+      "tier": 2,
+      "id": 322,
+      "parent": 205
+    },
+    {
+      "code": "S12000029",
+      "name": "South Lanarkshire Council",
+      "website": "https://www.southlanarkshire.gov.uk/",
+      "slug": "south-lanarkshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 324,
+      "parent": null
+    },
+    {
+      "code": "E07000149",
+      "name": "South Norfolk District Council",
+      "website": "https://www.southnorfolkandbroadland.gov.uk/",
+      "slug": "south-norfolk",
+      "country": "England",
+      "tier": 2,
+      "id": 325,
+      "parent": 239
+    },
+    {
+      "code": "E07000179",
+      "name": "South Oxfordshire District Council",
+      "website": "https://www.southoxon.gov.uk/",
+      "slug": "south-oxfordshire",
+      "country": "England",
+      "tier": 2,
+      "id": 327,
+      "parent": 266
+    },
+    {
+      "code": "E07000126",
+      "name": "South Ribble Borough Council",
+      "website": "https://www.southribble.gov.uk/",
+      "slug": "south-ribble",
+      "country": "England",
+      "tier": 2,
+      "id": 328,
+      "parent": 196
+    },
+    {
+      "code": "E07000196",
+      "name": "South Staffordshire Council",
+      "website": "https://www.sstaffs.gov.uk/",
+      "slug": "south-staffordshire",
+      "country": "England",
+      "tier": 2,
+      "id": 330,
+      "parent": 335
+    },
+    {
+      "code": "E08000023",
+      "name": "South Tyneside Council",
+      "website": "https://www.southtyneside.gov.uk/",
+      "slug": "south-tyneside",
+      "country": "England",
+      "tier": 3,
+      "id": 331,
+      "parent": null
+    },
+    {
+      "code": "E07000213",
+      "name": "Spelthorne Borough Council",
+      "website": "https://www.spelthorne.gov.uk/",
+      "slug": "spelthorne",
+      "country": "England",
+      "tier": 2,
+      "id": 333,
+      "parent": 350
+    },
+    {
+      "code": "E07000197",
+      "name": "Stafford Borough Council",
+      "website": "https://www.staffordbc.gov.uk/",
+      "slug": "stafford",
+      "country": "England",
+      "tier": 2,
+      "id": 334,
+      "parent": 335
+    },
+    {
+      "code": "E10000028",
+      "name": "Staffordshire County Council",
+      "website": "https://www.staffordshire.gov.uk/",
+      "slug": "staffordshire",
+      "country": "England",
+      "tier": 1,
+      "id": 335,
+      "parent": null
+    },
+    {
+      "code": "E07000198",
+      "name": "Staffordshire Moorlands District Council",
+      "website": "https://www.staffsmoorlands.gov.uk/",
+      "slug": "staffordshire-moorlands",
+      "country": "England",
+      "tier": 2,
+      "id": 336,
+      "parent": 335
+    },
+    {
+      "code": "E07000240",
+      "name": "St Albans City and District Council",
+      "website": "https://www.stalbans.gov.uk/",
+      "slug": "st-albans",
+      "country": "England",
+      "tier": 2,
+      "id": 337,
+      "parent": 171
+    },
+    {
+      "code": "E07000243",
+      "name": "Stevenage Borough Council",
+      "website": "https://www.stevenage.gov.uk/",
+      "slug": "stevenage",
+      "country": "England",
+      "tier": 2,
+      "id": 339,
+      "parent": 171
+    },
+    {
+      "code": "E08000013",
+      "name": "St Helens Council",
+      "website": "https://www.sthelens.gov.uk/",
+      "slug": "st-helens",
+      "country": "England",
+      "tier": 3,
+      "id": 340,
+      "parent": null
+    },
+    {
+      "code": "S12000030",
+      "name": "Stirling Council",
+      "website": "https://stirling.gov.uk/",
+      "slug": "stirling",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 341,
+      "parent": null
+    },
+    {
+      "code": "E08000007",
+      "name": "Stockport Metropolitan Borough Council",
+      "website": "https://www.stockport.gov.uk/",
+      "slug": "stockport",
+      "country": "England",
+      "tier": 3,
+      "id": 342,
+      "parent": null
+    },
+    {
+      "code": "E06000004",
+      "name": "Stockton-on-Tees Borough Council",
+      "website": "https://www.stockton.gov.uk/",
+      "slug": "stockton-on-tees",
+      "country": "England",
+      "tier": 3,
+      "id": 343,
+      "parent": null
+    },
+    {
+      "code": "E06000021",
+      "name": "Stoke-on-Trent City Council",
+      "website": "https://www.stoke.gov.uk/",
+      "slug": "stoke-on-trent",
+      "country": "England",
+      "tier": 3,
+      "id": 344,
+      "parent": null
+    },
+    {
+      "code": "E07000221",
+      "name": "Stratford-on-Avon District Council",
+      "website": "https://www.stratford.gov.uk/",
+      "slug": "stratford-on-avon",
+      "country": "England",
+      "tier": 2,
+      "id": 345,
+      "parent": 384
+    },
+    {
+      "code": "E07000082",
+      "name": "Stroud District Council",
+      "website": "https://www.stroud.gov.uk/",
+      "slug": "stroud",
+      "country": "England",
+      "tier": 2,
+      "id": 346,
+      "parent": 149
+    },
+    {
+      "code": "E10000029",
+      "name": "Suffolk County Council",
+      "website": "https://www.suffolk.gov.uk/",
+      "slug": "suffolk",
+      "country": "England",
+      "tier": 1,
+      "id": 348,
+      "parent": null
+    },
+    {
+      "code": "E08000024",
+      "name": "Sunderland City Council",
+      "website": "https://www.sunderland.gov.uk/",
+      "slug": "sunderland",
+      "country": "England",
+      "tier": 3,
+      "id": 349,
+      "parent": null
+    },
+    {
+      "code": "E10000030",
+      "name": "Surrey County Council",
+      "website": "https://www.surreycc.gov.uk/",
+      "slug": "surrey",
+      "country": "England",
+      "tier": 1,
+      "id": 350,
+      "parent": null
+    },
+    {
+      "code": "E07000214",
+      "name": "Surrey Heath Borough Council",
+      "website": "https://www.surreyheath.gov.uk/",
+      "slug": "surrey-heath",
+      "country": "England",
+      "tier": 2,
+      "id": 351,
+      "parent": 350
+    },
+    {
+      "code": "E07000113",
+      "name": "Swale Borough Council",
+      "website": "https://www.swale.gov.uk/",
+      "slug": "swale",
+      "country": "England",
+      "tier": 2,
+      "id": 353,
+      "parent": 188
+    },
+    {
+      "code": "E06000030",
+      "name": "Swindon Borough Council",
+      "website": "https://www.swindon.gov.uk/",
+      "slug": "swindon",
+      "country": "England",
+      "tier": 3,
+      "id": 355,
+      "parent": null
+    },
+    {
+      "code": "E08000008",
+      "name": "Tameside Metropolitan Borough Council",
+      "website": "https://www.tameside.gov.uk/",
+      "slug": "tameside",
+      "country": "England",
+      "tier": 3,
+      "id": 356,
+      "parent": null
+    },
+    {
+      "code": "E07000199",
+      "name": "Tamworth Borough Council",
+      "website": "https://www.tamworth.gov.uk/",
+      "slug": "tamworth",
+      "country": "England",
+      "tier": 2,
+      "id": 357,
+      "parent": 335
+    },
+    {
+      "code": "E07000215",
+      "name": "Tandridge District Council",
+      "website": "https://www.tandridge.gov.uk/",
+      "slug": "tandridge",
+      "country": "England",
+      "tier": 2,
+      "id": 358,
+      "parent": 350
+    },
+    {
+      "code": "E07000045",
+      "name": "Teignbridge District Council",
+      "website": "https://www.teignbridge.gov.uk/",
+      "slug": "teignbridge",
+      "country": "England",
+      "tier": 2,
+      "id": 360,
+      "parent": 104
+    },
+    {
+      "code": "E06000020",
+      "name": "Telford & Wrekin Council",
+      "website": "https://www.telford.gov.uk/",
+      "slug": "telford-and-wrekin",
+      "country": "England",
+      "tier": 3,
+      "id": 361,
+      "parent": null
+    },
+    {
+      "code": "E07000076",
+      "name": "Tendring District Council",
+      "website": "https://www.tendringdc.gov.uk/",
+      "slug": "tendring",
+      "country": "England",
+      "tier": 2,
+      "id": 362,
+      "parent": 134
+    },
+    {
+      "code": "E07000093",
+      "name": "Test Valley Borough Council",
+      "website": "https://www.testvalley.gov.uk/",
+      "slug": "test-valley",
+      "country": "England",
+      "tier": 2,
+      "id": 363,
+      "parent": 160
+    },
+    {
+      "code": "E07000083",
+      "name": "Tewkesbury Borough Council",
+      "website": "https://tewkesbury.gov.uk/",
+      "slug": "tewkesbury",
+      "country": "England",
+      "tier": 2,
+      "id": 364,
+      "parent": 149
+    },
+    {
+      "code": "E07000114",
+      "name": "Thanet District Council",
+      "website": "https://thanet.gov.uk/",
+      "slug": "thanet",
+      "country": "England",
+      "tier": 2,
+      "id": 365,
+      "parent": 188
+    },
+    {
+      "code": "S12000017",
+      "name": "The Highland Council",
+      "website": "https://www.highland.gov.uk/",
+      "slug": "highland",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 173,
+      "parent": null
+    },
+    {
+      "code": "S12000020",
+      "name": "The Moray Council",
+      "website": "https://www.moray.gov.uk/",
+      "slug": "moray",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 229,
+      "parent": null
+    },
+    {
+      "code": "E07000102",
+      "name": "Three Rivers District Council",
+      "website": "https://www.threerivers.gov.uk/",
+      "slug": "three-rivers",
+      "country": "England",
+      "tier": 2,
+      "id": 367,
+      "parent": 171
+    },
+    {
+      "code": "E06000034",
+      "name": "Thurrock Council",
+      "website": "https://www.thurrock.gov.uk/",
+      "slug": "thurrock",
+      "country": "England",
+      "tier": 3,
+      "id": 368,
+      "parent": null
+    },
+    {
+      "code": "E07000115",
+      "name": "Tonbridge and Malling Borough Council",
+      "website": "https://www.tmbc.gov.uk/",
+      "slug": "tonbridge-and-malling",
+      "country": "England",
+      "tier": 2,
+      "id": 369,
+      "parent": 188
+    },
+    {
+      "code": "E06000027",
+      "name": "Torbay Council",
+      "website": "https://www.torbay.gov.uk/",
+      "slug": "torbay",
+      "country": "England",
+      "tier": 3,
+      "id": 370,
+      "parent": null
+    },
+    {
+      "code": "W06000020",
+      "name": "Torfaen County Borough Council",
+      "website": "https://www.torfaen.gov.uk/",
+      "slug": "torfaen",
+      "country": "Wales",
+      "tier": 3,
+      "id": 371,
+      "parent": null
+    },
+    {
+      "code": "E07000046",
+      "name": "Torridge District Council",
+      "website": "https://www.torridge.gov.uk/",
+      "slug": "torridge",
+      "country": "England",
+      "tier": 2,
+      "id": 372,
+      "parent": 104
+    },
+    {
+      "code": "E08000009",
+      "name": "Trafford Metropolitan Borough Council",
+      "website": "https://www.trafford.gov.uk/",
+      "slug": "trafford",
+      "country": "England",
+      "tier": 3,
+      "id": 374,
+      "parent": null
+    },
+    {
+      "code": "E07000116",
+      "name": "Tunbridge Wells Borough Council",
+      "website": "https://www.tunbridgewells.gov.uk/",
+      "slug": "tunbridge-wells",
+      "country": "England",
+      "tier": 2,
+      "id": 375,
+      "parent": 188
+    },
+    {
+      "code": "E07000077",
+      "name": "Uttlesford District Council",
+      "website": "https://www.uttlesford.gov.uk/home",
+      "slug": "uttlesford",
+      "country": "England",
+      "tier": 2,
+      "id": 376,
+      "parent": 134
+    },
+    {
+      "code": "W06000014",
+      "name": "Vale of Glamorgan Council",
+      "website": "https://valeofglamorgan.gov.uk/en/index.aspx",
+      "slug": "vale-of-glamorgan",
+      "country": "Wales",
+      "tier": 3,
+      "id": 366,
+      "parent": null
+    },
+    {
+      "code": "E07000180",
+      "name": "Vale of White Horse District Council",
+      "website": "https://www.whitehorsedc.gov.uk/",
+      "slug": "vale-of-white-horse",
+      "country": "England",
+      "tier": 2,
+      "id": 377,
+      "parent": 266
+    },
+    {
+      "code": "E08000036",
+      "name": "Wakefield Metropolitan District Council",
+      "website": "https://www.wakefield.gov.uk/",
+      "slug": "wakefield",
+      "country": "England",
+      "tier": 3,
+      "id": 378,
+      "parent": null
+    },
+    {
+      "code": "E08000030",
+      "name": "Walsall Metropolitan Borough Council",
+      "website": "https://go.walsall.gov.uk/",
+      "slug": "walsall",
+      "country": "England",
+      "tier": 3,
+      "id": 379,
+      "parent": null
+    },
+    {
+      "code": "E06000007",
+      "name": "Warrington Borough Council",
+      "website": "https://www.warrington.gov.uk/",
+      "slug": "warrington",
+      "country": "England",
+      "tier": 3,
+      "id": 382,
+      "parent": null
+    },
+    {
+      "code": "E07000222",
+      "name": "Warwick District Council",
+      "website": "https://www.warwickdc.gov.uk/",
+      "slug": "warwick",
+      "country": "England",
+      "tier": 2,
+      "id": 383,
+      "parent": 384
+    },
+    {
+      "code": "E10000031",
+      "name": "Warwickshire County Council",
+      "website": "https://www.warwickshire.gov.uk/",
+      "slug": "warwickshire",
+      "country": "England",
+      "tier": 1,
+      "id": 384,
+      "parent": null
+    },
+    {
+      "code": "E07000103",
+      "name": "Watford Borough Council",
+      "website": "https://www.watford.gov.uk/",
+      "slug": "watford",
+      "country": "England",
+      "tier": 2,
+      "id": 385,
+      "parent": 171
+    },
+    {
+      "code": "E07000216",
+      "name": "Waverley Borough Council",
+      "website": "https://www.waverley.gov.uk/",
+      "slug": "waverley",
+      "country": "England",
+      "tier": 2,
+      "id": 387,
+      "parent": 350
+    },
+    {
+      "code": "E07000065",
+      "name": "Wealden District Council",
+      "website": "https://www.wealden.gov.uk/",
+      "slug": "wealden",
+      "country": "England",
+      "tier": 2,
+      "id": 388,
+      "parent": 127
+    },
+    {
+      "code": "E07000241",
+      "name": "Welwyn Hatfield Council",
+      "website": "https://www.welhat.gov.uk/",
+      "slug": "welwyn-hatfield",
+      "country": "England",
+      "tier": 2,
+      "id": 390,
+      "parent": 171
+    },
+    {
+      "code": "E06000037",
+      "name": "West Berkshire Council",
+      "website": "https://www.westberks.gov.uk/",
+      "slug": "west-berkshire",
+      "country": "England",
+      "tier": 3,
+      "id": 391,
+      "parent": null
+    },
+    {
+      "code": "E07000047",
+      "name": "West Devon Borough Council",
+      "website": "https://www.westdevon.gov.uk/",
+      "slug": "west-devon",
+      "country": "England",
+      "tier": 2,
+      "id": 392,
+      "parent": 104
+    },
+    {
+      "code": "S12000039",
+      "name": "West Dunbartonshire Council",
+      "website": "https://www.west-dunbarton.gov.uk/",
+      "slug": "west-dunbartonshire",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 394,
+      "parent": null
+    },
+    {
+      "code": "E07000127",
+      "name": "West Lancashire Borough Council",
+      "website": "https://www.westlancs.gov.uk/",
+      "slug": "west-lancashire",
+      "country": "England",
+      "tier": 2,
+      "id": 395,
+      "parent": 196
+    },
+    {
+      "code": "E07000142",
+      "name": "West Lindsey District Council",
+      "website": "https://www.west-lindsey.gov.uk/",
+      "slug": "west-lindsey",
+      "country": "England",
+      "tier": 2,
+      "id": 396,
+      "parent": 205
+    },
+    {
+      "code": "S12000040",
+      "name": "West Lothian Council",
+      "website": "https://www.westlothian.gov.uk/",
+      "slug": "west-lothian",
+      "country": "Scotland",
+      "tier": 3,
+      "id": 397,
+      "parent": null
+    },
+    {
+      "code": "E06000064",
+      "name": "Westmorland and Furness Council",
+      "website": "https://www.westmorlandandfurness.gov.uk/",
+      "slug": "westmorland-and-furness",
+      "country": "England",
+      "tier": 3,
+      "id": 427,
+      "parent": null
+    },
+    {
+      "code": "E06000062",
+      "name": "West Northamptonshire Council",
+      "website": "https://www.westnorthants.gov.uk/",
+      "slug": "west-northamptonshire",
+      "country": "England",
+      "tier": 3,
+      "id": 425,
+      "parent": null
+    },
+    {
+      "code": "E07000181",
+      "name": "West Oxfordshire District Council",
+      "website": "https://www.westoxon.gov.uk/",
+      "slug": "west-oxfordshire",
+      "country": "England",
+      "tier": 2,
+      "id": 398,
+      "parent": 266
+    },
+    {
+      "code": "E07000245",
+      "name": "West Suffolk District Council",
+      "website": "https://www.westsuffolk.gov.uk/",
+      "slug": "west-suffolk",
+      "country": "England",
+      "tier": 2,
+      "id": 422,
+      "parent": 348
+    },
+    {
+      "code": "E10000032",
+      "name": "West Sussex County Council",
+      "website": "https://www.westsussex.gov.uk/",
+      "slug": "west-sussex",
+      "country": "England",
+      "tier": 1,
+      "id": 400,
+      "parent": null
+    },
+    {
+      "code": "E08000010",
+      "name": "Wigan Metropolitan Borough Council",
+      "website": "https://www.wigan.gov.uk/",
+      "slug": "wigan",
+      "country": "England",
+      "tier": 3,
+      "id": 402,
+      "parent": null
+    },
+    {
+      "code": "E06000054",
+      "name": "Wiltshire Council",
+      "website": "https://www.wiltshire.gov.uk/",
+      "slug": "wiltshire",
+      "country": "England",
+      "tier": 3,
+      "id": 403,
+      "parent": null
+    },
+    {
+      "code": "E07000094",
+      "name": "Winchester City Council",
+      "website": "https://www.winchester.gov.uk/",
+      "slug": "winchester",
+      "country": "England",
+      "tier": 2,
+      "id": 404,
+      "parent": 160
+    },
+    {
+      "code": "E08000015",
+      "name": "Wirral Council",
+      "website": "https://www.wirral.gov.uk/",
+      "slug": "wirral",
+      "country": "England",
+      "tier": 3,
+      "id": 406,
+      "parent": null
+    },
+    {
+      "code": "E07000217",
+      "name": "Woking Borough Council",
+      "website": "https://www.woking.gov.uk/",
+      "slug": "woking",
+      "country": "England",
+      "tier": 2,
+      "id": 407,
+      "parent": 350
+    },
+    {
+      "code": "E06000041",
+      "name": "Wokingham Borough Council",
+      "website": "https://www.wokingham.gov.uk/",
+      "slug": "wokingham",
+      "country": "England",
+      "tier": 3,
+      "id": 408,
+      "parent": null
+    },
+    {
+      "code": "E07000237",
+      "name": "Worcester City Council",
+      "website": "https://www.worcester.gov.uk/",
+      "slug": "worcester",
+      "country": "England",
+      "tier": 2,
+      "id": 410,
+      "parent": 411
+    },
+    {
+      "code": "E10000034",
+      "name": "Worcestershire County Council",
+      "website": "https://www.worcestershire.gov.uk/",
+      "slug": "worcestershire",
+      "country": "England",
+      "tier": 1,
+      "id": 411,
+      "parent": null
+    },
+    {
+      "code": "E07000229",
+      "name": "Worthing Borough Council",
+      "website": "https://www.adur-worthing.gov.uk/",
+      "slug": "worthing",
+      "country": "England",
+      "tier": 2,
+      "id": 412,
+      "parent": 400
+    },
+    {
+      "code": "W06000006",
+      "name": "Wrexham County Borough Council",
+      "website": "https://www.wrexham.gov.uk/",
+      "slug": "wrexham",
+      "country": "Wales",
+      "tier": 3,
+      "id": 413,
+      "parent": null
+    },
+    {
+      "code": "E07000238",
+      "name": "Wychavon District Council",
+      "website": "https://www.wychavon.gov.uk/",
+      "slug": "wychavon",
+      "country": "England",
+      "tier": 2,
+      "id": 414,
+      "parent": 411
+    },
+    {
+      "code": "E07000128",
+      "name": "Wyre Council",
+      "website": "https://www.wyre.gov.uk/",
+      "slug": "wyre",
+      "country": "England",
+      "tier": 2,
+      "id": 416,
+      "parent": 196
+    },
+    {
+      "code": "E07000239",
+      "name": "Wyre Forest District Council",
+      "website": "https://www.wyreforestdc.gov.uk/",
+      "slug": "wyre-forest",
+      "country": "England",
+      "tier": 2,
+      "id": 417,
+      "parent": 411
+    }
+  ]
+}

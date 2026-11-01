@@ -6,8 +6,9 @@ import { Camera, ChevronRight, ImagePlus, Radio, RefreshCw, Sparkles } from "luc
 import { samples, getSampleAnalysis, type SampleId } from "@/lib/samples";
 import { defectAnalysisSchema, type DefectAnalysis } from "@/lib/ai/schema";
 import { prepareImage } from "@/lib/image";
+import { z } from "zod";
 
-export type ScanResult = { analysis: DefectAnalysis; source: "live" | "example"; isDemo: boolean; imageHash: string; preview: string };
+export type ScanResult = { analysis: DefectAnalysis; source: "live" | "example"; isDemo: boolean; imageHash: string; preview: string; sampleId?: SampleId; receiptId?: string; receiptUnavailable?: boolean };
 
 export default function ScanPanel({ onResult, initialSample }: { onResult: (result: ScanResult) => void; initialSample?: SampleId }) {
   const [live, setLive] = useState(false);
@@ -51,6 +52,8 @@ export default function ScanPanel({ onResult, initialSample }: { onResult: (resu
       objectUrl.current = image.preview; setPreview(image.preview);
       let analysis: DefectAnalysis;
       let resultSource: "live" | "example";
+      let receiptId: string | undefined;
+      let receiptUnavailable = false;
       if (runMode === "example" && sampleId) {
         await new Promise(resolve => setTimeout(resolve, 1250));
         analysis = getSampleAnalysis(sampleId); resultSource = "example";
@@ -58,14 +61,17 @@ export default function ScanPanel({ onResult, initialSample }: { onResult: (resu
         if (!live) throw new Error("Live AI is not configured yet. Try one of the labelled example scans below.");
         const body = new FormData(); body.append("image", image.file);
         timeout = setTimeout(() => abort.abort(), 45_000);
-        const response = await fetch("/api/analyse", { method: "POST", body, signal: abort.signal });
+        const response = await fetch("/api/analyse", { method: "POST", headers: sampleId ? { "X-Pothole-Demo": "1" } : undefined, body, signal: abort.signal });
         const data = await response.json();
         if (!response.ok) throw new Error(typeof data.error === "string" ? data.error : "The scanner is taking a breather. Please retry.");
         analysis = defectAnalysisSchema.parse(data.analysis); resultSource = "live";
+        const receipt = z.uuid().safeParse(data.receiptId);
+        receiptId = receipt.success ? receipt.data : undefined;
+        receiptUnavailable = data.receiptUnavailable === true;
       }
       if (!abort.signal.aborted) {
         objectUrl.current = "";
-        onResult({ analysis, source: resultSource, isDemo: !!sampleId, imageHash: image.hash, preview: image.preview });
+        onResult({ analysis, source: resultSource, isDemo: !!sampleId, imageHash: image.hash, preview: image.preview, sampleId, receiptId, receiptUnavailable });
       }
     } catch (cause) {
       setError(cause instanceof Error && cause.name !== "AbortError" ? cause.message : "Scan timed out. Please retry or use a labelled example scan.");

@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { achievements, addCapture, emptyGameState, GameStateSchema, MAX_CAPTURES, playerProgress, recordRejection, updateReportStatus } from "../lib/game/progression";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { achievements, addCapture, attachScanReceipt, emptyGameState, GameStateSchema, MAX_CAPTURES, playerProgress, recordRejection, updateReportStatus, type GameState } from "../lib/game/progression";
 import { GAME_STORAGE_KEY, readGameState, saveGameState } from "../lib/game/storage";
 import { prepareReport } from "../lib/reporting/report";
 import { validReportInput } from "./game-fixtures";
@@ -99,6 +99,92 @@ describe("honest report status", () => {
     expect(() => updateReportStatus(demo, report().id, "email_handoff")).toThrow("Demonstration");
     expect(() => updateReportStatus(demo, report().id, "submitted_by_user")).toThrow("Demonstration");
     expect(updateReportStatus(demo, report().id, "draft_prepared")).toEqual(demo);
+  });
+});
+
+describe("fresh receipts for existing captures", () => {
+  const oldReceipt = "a4b638dd-81ca-4ec9-8177-5195ffda702b";
+  const freshReceipt = "e98a2d49-58f2-4563-b6c7-5331b34a802b";
+
+  it("updates only the receipt while preserving the frozen report, status, observations and XP", () => {
+    const original = prepareReport(validReportInput({
+      scanReceiptId: oldReceipt,
+      monsterProfile: { extent: "medium", firstObservedOn: "2026-01-01" },
+    }));
+    const captured = addCapture(emptyGameState(), original).state;
+    const submitted = updateReportStatus(captured, original.id, "submitted_by_user");
+    const withAnother = addCapture(submitted, report(2)).state;
+    const updated = attachScanReceipt(withAnother, original.id, freshReceipt);
+    expect(updated.report).toEqual({ ...withAnother.captures[0], scanReceiptId: freshReceipt });
+    expect(updated.state.captures[1]).toEqual(withAnother.captures[1]);
+    expect(withAnother.captures[0].scanReceiptId).toBe(oldReceipt);
+    expect(playerProgress(updated.state)).toEqual(playerProgress(withAnother));
+    expect(updated.report.status).toBe("submitted_by_user");
+  });
+
+  it("retains a duplicate rescan's fresh receipt across reloads without upgrading its original capture", () => {
+    const original = prepareReport(validReportInput({ scanReceiptId: oldReceipt }));
+    const first = addCapture(emptyGameState(), original).state;
+    const rescanned = prepareReport(validReportInput({
+      scanReceiptId: freshReceipt,
+      preparedAt: "2027-01-01T13:00:00.000Z",
+      monsterProfile: { extent: "large", firstObservedOn: "2026-01-01" },
+    }));
+    const duplicate = addCapture(first, rescanned);
+    expect(duplicate.awardedXp).toBe(0);
+    const updated = attachScanReceipt(duplicate.state, original.id, freshReceipt);
+    let stored = "";
+    expect(saveGameState({ setItem: (_key, value) => { stored = value; } }, updated.state)).toEqual({ ok: true });
+    const reloaded = readGameState({ getItem: () => stored });
+    expect(reloaded.captures[0]).toEqual({ ...original, scanReceiptId: freshReceipt });
+    expect(playerProgress(reloaded).xp).toBe(60);
+    expect(addCapture(reloaded, rescanned).awardedXp).toBe(0);
+  });
+
+  it("supports legacy captures without receipts and rejects invalid receipts or unknown reports", () => {
+    const original = report();
+    const state = addCapture(emptyGameState(), original).state;
+    expect(attachScanReceipt(state, original.id, freshReceipt).report.monsterProfile).toEqual(original.monsterProfile);
+    expect(() => attachScanReceipt(state, original.id, "not-a-uuid")).toThrow();
+    expect(() => attachScanReceipt(state, "missing-report", freshReceipt)).toThrow("not in your PotholeDex");
+    expect(state.captures[0]).not.toHaveProperty("scanReceiptId");
+  });
+
+  describe("progress hook receipt persistence", () => {
+    afterEach(() => {
+      vi.unstubAllGlobals();
+      vi.doUnmock("react");
+      vi.resetModules();
+    });
+
+    async function loadProgress(storage: Pick<Storage, "getItem" | "setItem">) {
+      vi.resetModules();
+      vi.doMock("react", () => ({ useSyncExternalStore: (_subscribe: unknown, getSnapshot: () => GameState) => getSnapshot() }));
+      vi.stubGlobal("window", { localStorage: storage });
+      return (await import("../lib/client/useProgress")).default;
+    }
+
+    it("persists the fresh receipt before a remote claim so reopening the draft can retry", async () => {
+      const original = prepareReport(validReportInput({ scanReceiptId: oldReceipt }));
+      let stored = JSON.stringify(addCapture(emptyGameState(), original).state);
+      const useProgress = await loadProgress({ getItem: () => stored, setItem: (_key, value) => { stored = value; } });
+      const result = useProgress().attachReceipt(original.id, freshReceipt);
+      expect(result).toEqual({ report: { ...original, scanReceiptId: freshReceipt }, saveError: undefined });
+      expect(readGameState({ getItem: () => stored }).captures[0].scanReceiptId).toBe(freshReceipt);
+      expect(playerProgress(useProgress().state).xp).toBe(60);
+    });
+
+    it("exposes a storage failure while retaining the fresh receipt for the current visit", async () => {
+      const original = prepareReport(validReportInput({ scanReceiptId: oldReceipt }));
+      const stored = JSON.stringify(addCapture(emptyGameState(), original).state);
+      const useProgress = await loadProgress({ getItem: () => stored, setItem: () => { throw new Error("Quota exceeded"); } });
+      const result = useProgress().attachReceipt(original.id, freshReceipt);
+      expect(result.report.scanReceiptId).toBe(freshReceipt);
+      expect(result.saveError).toContain("could not save");
+      expect(useProgress().state.captures[0].scanReceiptId).toBe(freshReceipt);
+      expect(readGameState({ getItem: () => stored }).captures[0].scanReceiptId).toBe(oldReceipt);
+      expect(playerProgress(useProgress().state).xp).toBe(60);
+    });
   });
 });
 

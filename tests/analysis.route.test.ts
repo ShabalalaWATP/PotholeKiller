@@ -1,9 +1,10 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { GET } from "../app/api/config/route";
 
-const boundary = vi.hoisted(() => ({ analyse: vi.fn(), sanitise: vi.fn() }));
+const boundary = vi.hoisted(() => ({ analyse: vi.fn(), sanitise: vi.fn(), receipt: vi.fn() }));
 vi.mock("../lib/ai/analyse", () => ({ analysePhotograph: boundary.analyse }));
 vi.mock("../lib/security/image", () => ({ sanitiseImage: boundary.sanitise }));
+vi.mock("../lib/community/scan-receipt", () => ({ maybeIssueScanReceipt: boundary.receipt }));
 
 function request(origin = "https://pothole.example", form?: FormData) {
   const data = form ?? new FormData();
@@ -24,6 +25,7 @@ beforeEach(async () => {
   ({ RequestFailure } = await import("../lib/security/errors"));
   boundary.sanitise.mockResolvedValue("data:image/jpeg;base64,cleaned");
   boundary.analyse.mockResolvedValue({ defectType: "pothole" });
+  boundary.receipt.mockResolvedValue({});
 });
 afterEach(() => vi.unstubAllEnvs());
 
@@ -40,6 +42,7 @@ describe("analysis HTTP route", () => {
     expect(response.status).toBe(403);
     expect(boundary.sanitise).not.toHaveBeenCalled();
     expect(boundary.analyse).not.toHaveBeenCalled();
+    expect(boundary.receipt).not.toHaveBeenCalled();
   });
   it("reports missing configuration without contacting the provider", async () => {
     vi.stubEnv("OPENAI_API_KEY", "");
@@ -108,6 +111,19 @@ describe("analysis HTTP route", () => {
     boundary.analyse.mockRejectedValueOnce(new RequestFailure(504, "SCAN_TIMEOUT", "Please retry."));
     expect((await POST(request())).status).toBe(504);
     expect((await POST(request())).status).toBe(200);
+  });
+  it("returns an optional server-bound receipt only after successful live analysis", async () => {
+    boundary.receipt.mockResolvedValue({ receiptId: "11111111-1111-4111-8111-111111111111", receiptExpiresAt: "2026-11-01T16:00:00Z" });
+    const response = await POST(request());
+    expect(response.status).toBe(200);
+    expect(await response.json()).toMatchObject({ source: "live", receiptId: "11111111-1111-4111-8111-111111111111" });
+    expect(boundary.receipt).toHaveBeenCalledWith(expect.any(Request), "data:image/jpeg;base64,cleaned", { defectType: "pothole" });
+  });
+  it("preserves a live assessment when optional receipt storage is unavailable", async () => {
+    boundary.receipt.mockResolvedValue({ receiptUnavailable: true });
+    const response = await POST(request());
+    expect(response.status).toBe(200);
+    expect(await response.json()).toEqual({ analysis: { defectType: "pothole" }, source: "live", receiptUnavailable: true });
   });
 });
 
